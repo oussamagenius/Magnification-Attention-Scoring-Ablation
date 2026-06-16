@@ -1,0 +1,30 @@
+# MagnificationAttentionMIL — Dependencies
+# PyTorch (>=2.0) and torchvision must be installed separately to match your
+# CUDA version. See https://pytorch.org/get-started/locally/ for instructions.
+# All other dependencies below are CUDA-version-independent.
+
+# Model & Training
+timm>=1.0.0
+scikit-learn>=1.5.0
+
+# Data processing
+pandas>=2.2.0
+numpy>=1.26.0
+Pillow>=10.0.0
+opencv-python-headless>=4.9.0   # V2: ROI preprocessing
+
+# Visualization
+matplotlib>=3.9.0
+seaborn>=0.13.0
+
+# Configuration
+pyyaml>=6.0
+
+# Experiment tracking
+wandb>=0.17.0
+
+# Utilities
+tqdm>=4.66.0
+scipy>=1.14.0
+
+openpyxl

@@ -1,0 +1,46 @@
+{
+  "magnification_labels": [
+    "5x"
+  ],
+  "global": {
+    "5x": {
+      "mean": 1.0,
+      "std": 0.0,
+      "median": 1.0,
+      "q25": 1.0,
+      "q75": 1.0
+    }
+  },
+  "by_class": {
+    "normal": {
+      "5x": {
+        "mean": 1.0,
+        "std": 0.0
+      }
+    },
+    "abnormal": {
+      "5x": {
+        "mean": 1.0,
+        "std": 0.0
+      }
+    }
+  },
+  "by_fold": {
+    "fold_4": {
+      "5x": {
+        "mean": 1.0,
+        "std": 0.0
+      }
+    }
+  },
+  "friedman_test": {
+    "error": "At least 3 samples must be given for Friedman test, got 1."
+  },
+  "pairwise_wilcoxon": {},
+  "ranking": [
+    {
+      "magnification": "5x",
+      "mean_attention": 1.0
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+# ============================================================================
+# Piste 2 — Magnification Importance Scoring
+# a TESTER SUR RTX ADA 6000 REPROCESS IMAGE SANS MASK Ato 512 / batch 16 
+# Config: B3@384 + Focal Loss (paper settings) + EMA + Warmup
+# Reproduces AUC 0.691 ± 0.029 from main.tex
+# ============================================================================
+
+# ── Preprocessing ──────────────────────────────────────────────────────────
+preprocessing:
+  enabled: true
+  input_dir: "/workspace/Piste_2/new_prepocessing_pipeline/dataset"
+  output_dir: "/workspace/Piste_2/new_prepocessing_pipeline/dataset_preprocessed"
+  text_mask_top_pct: 0.13
+  text_mask_left_pct: 0.55
+  roi_padding_pct: 0.15
+  min_roi_area_pct: 0.25
+  jpeg_quality: 95
+
+# ── Data ───────────────────────────────────────────────────────────────────
+data:
+  root_dir: "/workspace/Piste_2/new_prepocessing_pipeline/dataset_preprocessed"
+  image_size: 480                      # INCREASED: 512x512 to preserve fine textures like mosaicism
+  num_magnifications: 4
+  magnification_labels: ["1x", "3x", "5x", "7x"]
+  pre_acid_files: ["pre_1x.jpg", "pre_3x.jpg", "pre_5x.jpg", "pre_7x.jpg"]
+  post_acid_files: ["post_1x.jpg", "post_3x.jpg", "post_5x.jpg", "post_7x.jpg"]
+  excluded_patients:
+    - "buth_257"
+    - "buth_285"
+    - "buth_293"
+    - "buth_315"
+    - "buth_337"
+
+# ── Training ───────────────────────────────────────────────────────────────
+training:
+  backbone: "convnext_tiny"           # NEW: ConvNeXt-Small
+  feature_dim: 768                     # ConvNeXt-Small output
+
+  epochs: 80                            # INCREASED: Give it time to adapt to new tight crops
+  batch_size: 16                        # OPTIMIZED for RTX 5090 (was 8)
+
+  lr_backbone: 3.0e-5                   # INCREASED slightly: Help adapt to pure tissue textures
+  lr_head: 2.5e-4                       # INCREASED: Train attention head faster while backbone is frozen
+
+  warmup_epochs: 10                     # NEW (not in paper): linear warmup 10% → 100%
+  ema_decay: 0.999                      # NEW (not in paper): exponential moving average
+
+  weight_decay: 5.0e-4                  # INCREASED: Stronger regularization against overfitting
+
+  optimizer: "adamw"
+  betas: [0.9, 0.999]
+
+  scheduler: "cosine"
+  scheduler_eta_min: 1.0e-7
+
+  n_folds: 5
+  seed: 42
+
+  early_stopping_patience: 15           # paper: 15
+
+  max_grad_norm: 0.5
+
+  num_workers: 16                        # 384×384 images are heavier
+  use_amp: true
+
+  freeze_backbone_until: -1             # NEW: Unfreeze entirely for ConvNeXt
+
+  label_smoothing: 0.05                 # 
+
+# ── Model ──────────────────────────────────────────────────────────────────
+model:
+  attention_dim: 256
+  dropout: 0.3                          # DECREASED: Let the bigger model learn
+  dropout_attention: 0.2               # DECREASED: Allow attention head to specialize more
+  gated_attention: true
+  use_batch_norm: true
+  pooling: "attention"
+
+# ── Loss ───────────────────────────────────────────────────────────────────
+loss:
+  type: "focal"                         # paper: Focal Loss
+  focal_gamma: 2.5                      # DECREASED: 2.5 is too aggressive and can overfit noisy labels. 2.0 is standard.
+  focal_alpha: null                     # auto-computed from class distribution
+
+# ── Augmentation ───────────────────────────────────────────────────────────
+augmentation:
+  mixup_alpha: 0.2
+  cutmix_alpha: 1.0
+  mixup_prob: 0.5
+  random_rotation: 30
+  random_crop_scale: [0.7, 1.0]
+  random_horizontal_flip: 0.5
+  random_vertical_flip: 0.5
+
+  random_affine:
+    enabled: true
+    degrees: 0
+    scale: [0.8, 1.2]
+    shear: [-10, 10]
+
+  color_jitter:
+    brightness: 0.3
+    contrast: 0.3
+    saturation: 0.2
+    hue: 0.1
+
+  random_erasing:
+    enabled: true
+    probability: 0.3
+    scale: [0.02, 0.2]
+    ratio: [0.3, 3.3]
+
+  gaussian_blur:
+    enabled: true
+    probability: 0.3
+    kernel_size: [3, 7]
+    sigma: [0.1, 2.0]
+
+# ── W&B ────────────────────────────────────────────────────────────────────
+wandb:
+  enabled: true
+  project: "colposcopy-magnification-importance"
+  entity: null
+  tags: ["attention-mil", "effnet-b3", "ema", "warmup", "hard-crop"]
+  log_model: true
+  log_attention_every: 5
+
+# ── Output ─────────────────────────────────────────────────────────────────
+output:
+  dir: "outputs"
+  checkpoints: "outputs/checkpoints"
+  logs: "outputs/logs"
+  metrics: "outputs/metrics"
+  figures: "outputs/figures"
+
+# ── Evaluation (TTA + Ensemble) ────────────────────────────────────────────
+evaluation:
+  use_tta: true
+  ensemble_folds: true

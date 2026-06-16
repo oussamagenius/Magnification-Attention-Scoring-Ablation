@@ -1,0 +1,159 @@
+# ============================================================================
+# Config v4 — ResNet18 + Stabilisation inter-fold best one
+# Objectif: réduire la variance 0.0367 => <0.025, viser AUC moyen obtenu 0.69
+# Diagnostic: underfitting sur fold 0/4, convergence saine sur fold 1/2/3
+# ============================================================================
+
+data:
+  root_dir: "/workspace/dataset_preprocessed"
+  image_size: 448
+  num_magnifications: 4
+  magnification_labels: ["1x", "3x", "5x", "7x"]
+  pre_acid_files: ["pre_1x.jpg", "pre_3x.jpg", "pre_5x.jpg", "pre_7x.jpg"]
+  post_acid_files: ["post_1x.jpg", "post_3x.jpg", "post_5x.jpg", "post_7x.jpg"]
+  excluded_patients:
+    - "buth_257"
+    - "buth_285"
+    - "buth_293"
+    - "buth_315"
+    - "buth_337"
+
+training:
+  backbone: "resnet18"
+  feature_dim: 512
+
+  epochs: 150                          # AUGMENTÉ: fold 1 convergeait encore à ep107/120
+                                       # fold 3 s'améliorait encore à ep114; on leur donne de la place
+
+  batch_size: 12
+
+  # FIX UNDERFITTING fold 0/4: LR backbone augmenté
+  # Fold 0 stagnait à train AUC 0.74 pendant 25 epochs => backbone gelé trop fort
+  lr_backbone: 5.0e-5                  # AUGMENTÉ (2e-5 -> 5e-5): forcer le backbone à apprendre
+  lr_head: 3.0e-4                      # AUGMENTÉ légèrement (2.5e-4 -> 3e-4)
+
+  warmup_epochs: 5
+  freeze_backbone_until: 3             # RÉDUIT (5 -> 3): dégel plus tôt sur les folds difficiles
+                                       # Fold 0/4 avaient besoin de signal backbone dès le début
+
+  ema_decay: 0.998                     # LÉGÈREMENT RÉDUIT (0.999 -> 0.998): moins de momentum
+                                       # sur petit dataset, 0.999 lisse trop agressivement
+
+  weight_decay: 3.0e-4                 # RÉDUIT (5e-4 -> 3e-4): moins de régularisation
+                                       # pour aider les folds en underfitting
+
+  optimizer: "adamw"
+  betas: [0.9, 0.999]
+
+  scheduler: "cosine_with_restarts"    # CHANGÉ: cosine avec redémarrage périodique
+  # Justification: fold 3 stagnait autour de 0.68 pendant 40+ epochs puis remontait
+  # Les restarts permettent de sortir de ces plateaux
+  # Si cosine_with_restarts non disponible, utiliser "cosine" (second choix acceptable)
+  scheduler_T0: 30                     # Redémarrage toutes les 30 epochs
+  scheduler_T_mult: 1                  # Période constante
+  scheduler_eta_min: 5.0e-7            # LÉGÈREMENT AUGMENTÉ (1e-7 -> 5e-7): éviter lr trop bas
+
+  n_folds: 5
+  seed: 42
+
+  early_stopping_patience: 35          # AUGMENTÉ (25 -> 35): fold 1 améliorait encore à ep82->107
+                                       # la patience courte tue les bons folds avant leur pic
+
+  early_stopping_monitor: "val_auc"
+  max_grad_norm: 1.0
+
+  num_workers: 8
+  use_amp: true
+
+  # FIX: label_smoothing SUPPRIMÉ avec BCE pos_weight
+  # BCE + pos_weight + label_smoothing = triple régularisation sur les labels
+  # Garder seulement pos_weight qui est le plus direct pour le déséquilibre de classes
+  label_smoothing: 0.0
+
+model:
+  pooling: "attention"
+  attention_dim: 128                   # AUGMENTÉ (64 -> 128): tête d'attention trop petite
+                                       # pour capturer les interactions entre 4 magnifications
+                                       # 64 noeuds insuffisants pour les 8 views (pre+post x 4 mags)
+  dropout: 0.25                        # RÉDUIT (0.3 -> 0.25): aider les folds en underfitting
+  dropout_attention: 0.2               # RÉDUIT (0.3 -> 0.2): idem
+  gated_attention: true                # MAINTENU: explique la différenciation des magnifications
+  drop_path_rate: 0.05                 # RÉDUIT (0.1 -> 0.05): moins de stochastic depth
+  use_batch_norm: true
+
+loss:
+  type: "bce"
+  focal_gamma: 0.0
+  focal_alpha: null
+  pos_weight: 1.75                     # AUGMENTÉ légèrement (1.5 -> 1.75): 203N/118A = ratio 1.72
+                                       # aligner pos_weight sur le vrai ratio du dataset
+
+augmentation:
+  random_rotation: 25                  # RÉDUIT (30 -> 25): moins agressif pour fold 0/4 qui sous-apprennent
+  random_crop_scale: [0.82, 1.0]       # RÉDUIT légèrement (0.8 -> 0.82)
+  random_horizontal_flip: 0.5
+  random_vertical_flip: 0.5
+
+  random_affine:
+    enabled: true
+    degrees: 0
+    scale: [0.92, 1.08]               # RÉDUIT (0.9-1.1 -> 0.92-1.08): moins déformant
+    shear: [-8, 8]                    # RÉDUIT (-10/10 -> -8/8)
+
+  color_jitter:
+    brightness: 0.20                  # RÉDUIT légèrement (0.25 -> 0.20)
+    contrast: 0.20
+    saturation: 0.15                  # RÉDUIT (0.2 -> 0.15): saturation diagnostique en colposcopie
+    hue: 0.04                         # RÉDUIT (0.05 -> 0.04): teinte = indicateur d'acetowhitening
+
+  random_erasing:
+    enabled: true
+    probability: 0.12                 # RÉDUIT (0.15 -> 0.12)
+    scale: [0.02, 0.08]               # RÉDUIT (max 0.1 -> 0.08)
+    ratio: [0.3, 3.3]
+
+  gaussian_blur:
+    enabled: true
+    probability: 0.15                 # RÉDUIT (0.2 -> 0.15)
+    kernel_size: [3, 5]
+    sigma: [0.1, 1.0]
+
+  # NOUVEAUTÉ: MixUp léger pour stabiliser l'entraînement inter-fold
+  # Aide particulièrement les folds avec peu de cas Abnormal dans le train set
+  mixup_alpha: 0.2
+  cutmix_alpha: 1.0
+  mixup_prob: 0.5                    # Très léger: mélange faible pour ne pas trop déformer
+                                      # les structures visuelles colposcopiques
+    # Si MixUp non implémenté, désactiver: enabled: false
+
+output:
+  dir: "outputs_v4"
+  checkpoints: "outputs_v4/checkpoints"
+  logs: "outputs_v4/logs"
+  metrics: "outputs_v4/metrics"
+  figures: "outputs_v4/figures"
+
+evaluation:
+  use_tta: true
+  ensemble_folds: true
+  # NOUVEAUTÉ: threshold optimisation par fold sur val set
+  # Utiliser le seuil optimal par fold plutôt que 0.5 fixe
+  # Le threshold moyen observé (~0.49) suggère un léger biais du modèle
+  optimize_threshold: true
+
+# ============================================================================
+# POURQUOI PAS RESNET34 ?
+# - Les folds 0 et 4 sont en underfitting (train AUC < 0.75), PAS en overfitting
+# - Passer à ResNet34 (21M -> doublement params) ne résout pas l'underfitting,
+#   il pourrait l'aggraver avec la même LR
+# - La variance inter-fold (0.0367) vient de la composition des val sets,
+#   pas de la capacité du backbone
+# - Les 3 folds sains atteignent déjà 0.69-0.73: ResNet18 a la capacité suffisante
+# - Solution: forcer le backbone à apprendre (LR + dégel précoce) plutôt que l'agrandir
+#
+# SI APRÈS CE RUN l'AUC reste < 0.70 sur fold 0/4:
+# - Investiguer la composition des val sets fold 0 et fold 4 (cas outliers ?)
+# - Envisager une stratification plus fine (par grade histologique si dispo)
+# - Considérer EfficientNet-B0 (5.3M params, batch norm intégré, meilleur
+#   gradient flow) comme alternative à ResNet18 avant de passer à ResNet34
+# ============================================================================

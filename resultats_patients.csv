@@ -1,0 +1,684 @@
+﻿Patient,Label Actuel,Diagnostic Clinique (commentaire)
+buth_001,Normal,NILM
+buth_003,Normal,NILM
+buth_004,Normal,NILM
+buth_007,Normal,Aucun commentaire
+buth_009,Normal,NILM
+buth_010,Normal,NILM plus mild inflammation
+buth_011,Normal,NILM
+buth_014,Normal,Aucun commentaire
+buth_017,Normal,Aucun commentaire
+buth_020,Normal,Aucun commentaire
+buth_023,Normal,NILM WITH MILD INFLAMMATION
+buth_024,Normal,Aucun commentaire
+buth_026,Normal,NILM
+buth_027,Normal,ASCUS
+buth_030,Normal,ASCUS L
+buth_031,Normal,ASCUS II WITH MODERATE INFLAMMATION
+buth_037,Normal,NILM
+buth_038,Normal,Atrophic Smear
+buth_039,Normal,NILM
+buth_040,Normal,NILM
+buth_042,Normal,NILM with moderate inflammation
+buth_043,Normal,NILM
+buth_044,Normal,Atrophic Smear
+buth_047,Normal,NILM
+buth_050,Normal,NILM
+buth_051,Normal,NILM
+buth_052,Normal,NILM
+buth_054,Normal,ASCUS
+buth_055,Normal,NILM - WITH REACTIVE CELLS
+buth_056,Normal,NILM
+buth_057,Normal,NILM
+buth_061,Normal,NILM
+buth_062,Normal,NILM - WITH MODERATE INFLAMMATION
+buth_066,Normal,NILM - WITH MODERATE TO SEVERE INFLAMMATION
+buth_067,Normal,INFLAMMATORY SMEAR
+buth_068,Normal,REACTIVE
+buth_069,Normal,INADEQUATE FOR EVALUATION
+buth_070,Normal,NILM - WITH MILD INFLAMMATION
+buth_071,Normal,INADEQUATE FOR EVALUATION
+buth_073,Normal,NILM - WITH MODERATE INFLAMMATION
+buth_074,Normal,NILM - WITH SEVERE INFLAMMATION
+buth_076,Normal,NILM - WITH MODERATE TO SEVERE INFLAMMATION
+buth_078,Normal,ASCUS
+buth_082,Normal,NILM - WITH MILD INFLAMMATION
+buth_084,Normal,NILM - WITH MILD INFLAMMATION
+buth_085,Normal,NILM - WITH MILD INFLAMMATION
+buth_087,Normal,NILM
+buth_088,Normal,ASCUS
+buth_089,Normal,NILM
+buth_090,Normal,NILM
+buth_091,Normal,NILM - WITH MILD INFLAMMATION
+buth_094,Normal,ATROPHIC SMEAR
+buth_096,Normal,NILM
+buth_098,Normal,NILM
+buth_100,Normal,NILM
+buth_101,Normal,REACTIVE
+buth_102,Normal,NILM - WITH MILD INFLAMMATION
+buth_103,Normal,ATROPHIC SMEAR
+buth_104,Normal,NILM
+buth_105,Normal,ASCUS
+buth_106,Normal,NILM
+buth_107,Normal,NILM
+buth_108,Normal,NILM
+buth_109,Normal,NILM
+buth_110,Normal,NILM
+buth_111,Normal,NILM - WITH MILD INFLAMMATION
+buth_112,Normal,ASCUS
+buth_113,Normal,ASCUS - WITH MODERATE INFLAMMATION
+buth_114,Normal,NILM
+buth_115,Normal,NILM - WITH HPV WITH MILD INFLAMMATION
+buth_116,Normal,NILM - WITH MILD INFLAMMATION
+buth_117,Normal,NILM
+buth_118,Normal,ATROPHIC SMEAR
+buth_121,Normal,NILM - HPV
+buth_123,Normal,NILM - WITH HPV
+buth_124,Normal,NILM - WITH MODERATE INFLAMMATION
+buth_125,Normal,NILM - WITH HPV
+buth_127,Normal,Aucun commentaire
+buth_128,Normal,NILM
+buth_129,Normal,NILM - WITH MODERATE INFLAMMATION
+buth_130,Normal,NILM - WITH MILD INFLAMMATION
+buth_132,Normal,NILM - WITH HPV
+buth_133,Normal,ATROPHIC SMEAR
+buth_137,Normal,NILM - WITH MILD INFLAMMATION
+buth_138,Normal,NILM
+buth_140,Normal,NILM - WITH HPV
+buth_141,Normal,ASCUS - H
+buth_146,Normal,NILM - WITH MILD INFLAMMATION
+buth_148,Normal,NILM
+buth_150,Normal,NILM - WITH MODERATE INFLAMMATION
+buth_151,Normal,REACTIVE WITH MODERATE INFLAMMATION
+buth_152,Normal,NILM
+buth_154,Normal,NILM
+buth_156,Normal,NILM
+buth_157,Normal,NILM - WITH MODERATE INFLAMMATION
+buth_160,Normal,NILM - WITH MILD INFLAMMATION
+buth_161,Normal,NILM - WITH MILD INFLAMMATION
+buth_162,Normal,NILM - WITH MODERATE INFLAMMATION
+buth_163,Normal,NILM - WITH MILD INFLAMMATION
+buth_164,Normal,ATROPHIC SMEAR
+buth_165,Normal,REACTIVE WITH MODERATE INFLAMMATION
+buth_166,Normal,NILM
+buth_168,Normal,ATROPHIC SMEAR
+buth_169,Normal,ATROPHIC SMEAR
+buth_170,Normal,ATROPHIC SMEAR
+buth_173,Normal,NILM
+buth_174,Normal,NILM - WITH MODERATE INFLAMMATION
+buth_175,Normal,NILM - WITH MODERATE INFLAMMATION
+buth_176,Normal,NILM
+buth_179,Normal,Aucun commentaire
+buth_181,Normal,Aucun commentaire
+buth_182,Normal,Aucun commentaire
+buth_184,Normal,Aucun commentaire
+buth_186,Normal,Aucun commentaire
+buth_188,Normal,ATROPHIC SMEAR
+buth_189,Normal,NILM
+buth_190,Normal,NILM
+buth_192,Normal,NILM
+buth_193,Normal,NILM – with HPV
+buth_194,Normal,NILM
+buth_195,Normal,NILM
+buth_196,Normal,ATROPHIC SMEAR
+buth_199,Normal,NILM - WITH MILD INFLAMMATION
+buth_201,Normal,NILM
+buth_202,Normal,NILM
+buth_203,Normal,ATROPHIC SMEAR
+buth_204,Normal,NILM
+buth_206,Normal,ASCUS
+buth_207,Normal,REACTIVE
+buth_208,Normal,"HSIL -CIN II
+NILM
+LSIL - KOILOCYTE ATYPIA
+LSIL - WITH MODERATE INFLAMMATION
+ASCUS
+NILM - WITH REACTIVE CELLS
+LSIL - HPV
+ASCUS - H
+NILM - WITH MODERATE INFLAMMATION
+NILM - WITH MODERATE TO SEVERE INFLAMMATION
+INFLAMMATORY SMEAR
+REACTIVE2 BUTHMINADEQUATE FOR EVALUATION
+NILM - WITH MILD INFLAMMATION
+NO SLIDE
+NILM - WITH SEVERE INFLAMMATION
+LSIL
+POOR SLIDE
+LSIL - WITH SEVERE INFLAMMATION
+ATROPHIC SMEAR
+NILM - WITH HPV WITH MILD INFLAMMATION
+NILM - WITH HPV
+ASCUS - H WITH MODERATE INFLAMMATION
+LSIL - WITH KOILOCYTE ATYPIA
+REACTIVE WITH MODERATE INFLAMMATION
+ASCUS - L
+
+
+
+
+
+
+NILM (Negative for Intraepithelial Lesion or Malignancy)
+
+NILM
+
+NILM – with reactive cells
+
+NILM – with mild inflammation
+
+NILM – with moderate inflammation
+
+NILM – with moderate to severe inflammation
+
+NILM – with severe inflammation
+
+NILM – with Human Papillomavirus (HPV)
+
+NILM – with HPV with mild inflammation
+
+LSIL (Low-Grade Squamous Intraepithelial Lesion)
+
+LSIL
+
+LSIL – Human Papillomavirus (HPV)
+
+LSIL – with koilocyte atypia
+
+LSIL – with moderate inflammation
+
+LSIL – with severe inflammation
+
+LSIL – with koilocyte atypia (duplicate term, but kept for clarity)
+
+HSIL (High-Grade Squamous Intraepithelial Lesion)
+
+HSIL – Cervical Intraepithelial Neoplasia II (CIN II)
+
+ASC-US / ASC-H
+
+ASC-US (Atypical Squamous Cells of Undetermined Significance)
+
+ASC-US – H (Atypical Squamous Cells, cannot exclude HSIL)
+
+ASC-US – H with moderate inflammation
+
+Other Cytology Findings
+
+Inflammatory smear
+
+Reactive
+
+Reactive with moderate inflammation
+
+Atrophic smear
+
+Unsatisfactory/Technical Issues
+
+Inadequate for evaluation
+
+No slide
+
+Poor slide
+
+Labels:
+  - name: ""Cervical_Os""
+    type: point
+    color: blue
+    
+  - name: ""Transformation_Zone""
+    type: polygon
+    color: purple
+    
+  - name: ""Normal""
+    type: tag (whole image)
+    color: green
+    
+  - name: ""LSIL_CIN1""
+    type: polygon
+    color: yellow
+    
+  - name: ""HSIL_CIN2_3""
+    type: polygon
+    color: orange
+    
+  - name: ""Cancer""
+    type: polygon
+    color: red"
+buth_209,Normal,ATROPHIC SMEAR
+buth_211,Normal,ATROPHIC SMEAR
+buth_212,Normal,ASCUS
+buth_214,Normal,ATROPHIC SMEAR
+buth_215,Normal,NILM
+buth_216,Normal,NILM
+buth_221,Normal,NILM
+buth_223,Normal,NILM
+buth_224,Normal,ASCUS
+buth_225,Normal,ATROPHIC SMEAR
+buth_226,Normal,REACTIVE
+buth_227,Normal,NILM - WITH MODERATE INFLAMMATION
+buth_228,Normal,ASCUS
+buth_229,Normal,NILM
+buth_230,Normal,NILM
+buth_231,Normal,NILM
+buth_233,Normal,NILM
+buth_234,Normal,NILM
+buth_236,Normal,REACTIVE
+buth_239,Normal,NILM
+buth_240,Normal,NILM
+buth_242,Normal,"HSIL -CIN II
+NILM
+LSIL - KOILOCYTE ATYPIA
+LSIL - WITH MODERATE INFLAMMATION
+ASCUS
+NILM - WITH REACTIVE CELLS
+LSIL - HPV
+ASCUS - H
+NILM - WITH MODERATE INFLAMMATION
+NILM - WITH MODERATE TO SEVERE INFLAMMATION
+INFLAMMATORY SMEAR
+REACTIVE
+INADEQUATE FOR EVALUATION
+NILM - WITH MILD INFLAMMATION
+NO SLIDE
+NILM - WITH SEVERE INFLAMMATION
+LSIL
+POOR SLIDE
+LSIL - WITH SEVERE INFLAMMATION
+ATROPHIC SMEAR
+NILM - WITH HPV WITH MILD INFLAMMATION
+NILM - WITH HPV
+ASCUS - H WITH MODERATE INFLAMMATION
+LSIL - WITH KOILOCYTE ATYPIA
+REACTIVE WITH MODERATE INFLAMMATION
+
+
+
+
+
+
+NILM (Negative for Intraepithelial Lesion or Malignancy)
+
+NILM
+
+NILM – with reactive cells
+
+NILM – with mild inflammation
+
+NILM – with moderate inflammation
+
+NILM – with moderate to severe inflammation
+
+NILM – with severe inflammation
+
+NILM – with Human Papillomavirus (HPV)
+
+NILM – with HPV with mild inflammation
+
+LSIL (Low-Grade Squamous Intraepithelial Lesion)
+
+LSIL
+
+LSIL – Human Papillomavirus (HPV)
+
+LSIL – with koilocyte atypia
+
+LSIL – with moderate inflammation
+
+LSIL – with severe inflammation
+
+LSIL – with koilocyte atypia (duplicate term, but kept for clarity)
+
+HSIL (High-Grade Squamous Intraepithelial Lesion)
+
+HSIL – Cervical Intraepithelial Neoplasia II (CIN II)
+
+ASC-US / ASC-H
+
+ASC-US (Atypical Squamous Cells of Undetermined Significance)
+
+ASC-US – H (Atypical Squamous Cells, cannot exclude HSIL)
+
+ASC-US – H with moderate inflammation
+
+Other Cytology Findings
+
+Inflammatory smear
+
+Reactive
+
+Reactive with moderate inflammation
+
+Atrophic smear
+
+Unsatisfactory/Technical Issues
+
+Inadequate for evaluation
+
+No slide
+
+Poor slide
+
+Labels:
+  - name: ""Cervical_Os""
+    type: point
+    color: blue
+    
+  - name: ""Transformation_Zone""
+    type: polygon
+    color: purple
+    
+  - name: ""Normal""
+    type: tag (whole image)
+    color: green
+    
+  - name: ""LSIL_CIN1""
+    type: polygon
+    color: yellow
+    
+  - name: ""HSIL_CIN2_3""
+    type: polygon
+    color: orange
+    
+  - name: ""Cancer""
+    type: polygon
+    color: red"
+buth_243,Normal,ATROPHIC SMEAR
+buth_244,Normal,NILM
+buth_246,Normal,NILM - WITH HPV
+buth_247,Normal,NILM
+buth_249,Normal,NILM - WITH MODERATE INFLAMMATION
+buth_250,Normal,REACTIVE
+buth_252,Normal,ASCUS
+buth_254,Normal,ASCUS
+buth_256,Normal,REACTIVE
+buth_259,Normal,ATROPHIC SMEAR
+buth_263,Normal,ASCUS
+buth_265,Normal,NILM - WITH HPV
+buth_266,Normal,NILM - WITH MODERATE TO SEVERE INFLAMMATION
+buth_267,Normal,ATROPHIC SMEAR
+buth_268,Normal,ASCUS - L
+buth_269,Normal,ATROPHIC SMEAR
+buth_270,Normal,NILM - WITH MILD INFLAMMATION
+buth_271,Normal,NILM
+buth_274,Normal,NILM
+buth_278,Normal,NILM - WITH HPV
+buth_279,Normal,NILM - WITH HPV WITH MILD INFLAMMATION
+buth_282,Normal,NILM - WITH HPV
+buth_286,Normal,NILM - WITH HPV
+buth_287,Normal,NILM - WITH MODERATE INFLAMMATION
+buth_288,Normal,REACTIVE WITH MODERATE INFLAMMATION
+buth_290,Normal,NILM - HPV WITH MILD INFLAMMATION
+buth_292,Normal,NILM - WITH MODERATE INFLAMMATION
+buth_293,Normal,NILM - WITH MODERATE INFLAMMATION
+buth_294,Normal,NILM - WITH MODERATE TO SEVERE INFLAMMATION
+buth_296,Normal,NILM - WITH HPV
+buth_298,Normal,NILM - WITH SEVERE INFLAMMATION
+buth_299,Normal,ATROPHIC SMEAR
+buth_300,Normal,REACTIVE WITH SEVERE INFLAMMATION
+buth_301,Normal,NILM - WITH HPV
+buth_303,Normal,NILM - WITH HPV
+buth_305,Normal,ATROPHIC SMEAR
+buth_308,Normal,NILM
+buth_309,Normal,NILM
+buth_313,Normal,NILM
+buth_315,Normal,ASCUS
+buth_316,Normal,ASCUS - WITH MODERATE INFLAMMATION
+buth_318,Normal,NILM - WITH HPV
+buth_320,Normal,NILM - WITH - ACTINOMYCETES
+buth_321,Normal,ASCUS
+buth_322,Normal,NILM - WITH HPV
+buth_325,Normal,NILM - WITH HPV
+buth_326,Normal,NILM - WITH MILD INFLAMMATION
+buth_327,Normal,ATROPHIC
+buth_329,Normal,"HSIL -CIN II
+NILM
+LSIL - KOILOCYTE ATYPIA
+LSIL - WITH MODERATE INFLAMMATION
+ASCUS
+NILM - WITH REACTIVE CELLS
+LSIL - HPV
+ASCUS - H
+NILM - WITH MODERATE INFLAMMATION
+NILM - WITH MODERATE TO SEVERE INFLAMMATION
+INFLAMMATORY SMEAR
+REACTIVE
+INADEQUATE FOR EVALUATION
+NILM - WITH MILD INFLAMMATION
+NO SLIDE
+NILM - WITH SEVERE INFLAMMATION
+LSIL
+POOR SLIDE
+LSIL - WITH SEVERE INFLAMMATION
+ATROPHIC SMEAR
+NILM - WITH HPV WITH MILD INFLAMMATION
+NILM - WITH HPV
+ASCUS - H WITH MODERATE INFLAMMATION
+LSIL - WITH KOILOCYTE ATYPIA
+REACTIVE WITH MODERATE INFLAMMATION
+
+
+ASCUS - L
+NILM - WITH - ACTINOMYCETES
+
+HSIL -CIN III
+
+
+
+NILM (Negative for Intraepithelial Lesion or Malignancy)
+
+NILM
+
+NILM – with reactive cells
+
+NILM – with mild inflammation
+
+NILM – with moderate inflammation
+
+NILM – with moderate to severe inflammation
+
+NILM – with severe inflammation
+
+NILM – with Human Papillomavirus (HPV)
+
+NILM – with HPV with mild inflammation
+
+LSIL (Low-Grade Squamous Intraepithelial Lesion)
+
+LSIL
+
+LSIL – Human Papillomavirus (HPV)
+
+LSIL – with koilocyte atypia
+
+LSIL – with moderate inflammation
+
+LSIL – with severe inflammation
+
+LSIL – with koilocyte atypia (duplicate term, but kept for clarity)
+
+HSIL (High-Grade Squamous Intraepithelial Lesion)
+
+HSIL – Cervical Intraepithelial Neoplasia II (CIN II)
+
+ASC-US / ASC-H
+
+ASC-US (Atypical Squamous Cells of Undetermined Significance)
+
+ASC-US – H (Atypical Squamous Cells, cannot exclude HSIL)
+
+ASC-US – H with moderate inflammation
+
+Other Cytology Findings
+
+Inflammatory smear
+
+Reactive
+
+Reactive with moderate inflammation
+
+Atrophic smear
+
+Unsatisfactory/Technical Issues
+
+Inadequate for evaluation
+
+No slide
+
+Poor slide
+
+Labels:
+  - name: ""Cervical_Os""
+    type: point
+    color: blue
+    
+  - name: ""Transformation_Zone""
+    type: polygon
+    color: purple
+    
+  - name: ""Normal""
+    type: tag (whole image)
+    color: green
+    
+  - name: ""LSIL_CIN1""
+    type: polygon
+    color: yellow
+    
+  - name: ""HSIL_CIN2_3""
+    type: polygon
+    color: orange
+    
+  - name: ""Cancer""
+    type: polygon
+    color: red"
+buth_331,Normal,NILM - WITH MODERATE INFLAMMATION
+buth_332,Normal,ATROPHIC SMEAR
+buth_333,Normal,NILM - WITH MODERATE INFLAMMATION
+buth_334,Normal,ATROPHIC SMEAR - WITH MODERATE INFLAMMATION
+buth_336,Normal,REACTIVE WITH MODERATE INFLAMMATION
+buth_338,Normal,REACTIVE SMEAR
+buth_339,Normal,ATROPHIC SMEAR  - WITH MILD INFLAMMATION
+buth_341,Normal,ATROPHIC SMEAR
+buth_343,Normal,NILM
+buth_002,Anormal,HSIL(CINII with moderate inflammation)
+buth_006,Anormal,Aucun commentaire
+buth_008,Anormal,Aucun commentaire
+buth_012,Anormal,Aucun commentaire
+buth_013,Anormal,HSIL(CINII)
+buth_015,Anormal,HSIL(CINIII)
+buth_016,Anormal,HSIL(CINIII)
+buth_018,Anormal,Aucun commentaire
+buth_019,Anormal,Aucun commentaire
+buth_021,Anormal,HSIL(CINII)
+buth_022,Anormal,ASCUS -II
+buth_025,Anormal,Aucun commentaire
+buth_028,Anormal,ASCUS II
+buth_029,Anormal,HSIL (CINII)
+buth_032,Anormal,HSIL (CINII)
+buth_033,Anormal,LSIL
+buth_034,Anormal,HSIL (CINII)
+buth_035,Anormal,LSIL (HPV)
+buth_036,Anormal,LSIL
+buth_041,Anormal,LSIL with moderate inflamation
+buth_045,Anormal,HSIL CIN II
+buth_046,Anormal,HSIL CIN II
+buth_048,Anormal,LSIL - KOILOCYTE ATYPIA
+buth_049,Anormal,LSIL - WITH MODERATE INFLAMMATION
+buth_053,Anormal,LSIL - KOILOCYTE ATYPIA
+buth_058,Anormal,LSIL - HPV
+buth_059,Anormal,HSIL CIN II
+buth_060,Anormal,ASCUS - H
+buth_063,Anormal,LSIL - HPV
+buth_064,Anormal,ASCUS - H
+buth_065,Anormal,ASCUS - H
+buth_072,Anormal,NO SLIDE
+buth_075,Anormal,LSIL -  WITH KOILOCYTE ATYPIA
+buth_077,Anormal,ASCUS - H
+buth_079,Anormal,LSIL
+buth_081,Anormal,LSIL - WITH SEVERE INFLAMMATION
+buth_083,Anormal,LSIL
+buth_086,Anormal,HSIL -CIN II
+buth_092,Anormal,HSIL -CIN II
+buth_093,Anormal,LSIL
+buth_095,Anormal,LSIL
+buth_097,Anormal,HSIL -CIN II
+buth_099,Anormal,ASCUS - H
+buth_119,Anormal,ASCUS - H
+buth_120,Anormal,ASCUS - L
+buth_122,Anormal,ASCUS - L
+buth_126,Anormal,LSIL
+buth_131,Anormal,LSIL
+buth_134,Anormal,ASCUS - H
+buth_135,Anormal,ASCUS - H
+buth_136,Anormal,LSIL
+buth_139,Anormal,LSIL
+buth_142,Anormal,ASCUS - L WITH MILD INFLAMMATION
+buth_143,Anormal,LSIL
+buth_144,Anormal,ASCUS - H WITH MODERATE INFLAMMATION
+buth_145,Anormal,LSIL - WITH KOILOCYTE ATYPIA
+buth_147,Anormal,LSIL
+buth_149,Anormal,ASCUS L
+buth_155,Anormal,LSIL
+buth_158,Anormal,ASCUS - H
+buth_159,Anormal,ASCUS - H WITH MODERATE INFLAMMATION
+buth_167,Anormal,ASCUS - H
+buth_171,Anormal,ASCUS - L
+buth_172,Anormal,LSIL
+buth_177,Anormal,Aucun commentaire
+buth_178,Anormal,Aucun commentaire
+buth_180,Anormal,Aucun commentaire
+buth_183,Anormal,Aucun commentaire
+buth_185,Anormal,Aucun commentaire
+buth_187,Anormal,Aucun commentaire
+buth_191,Anormal,NILM
+buth_197,Anormal,ASCUS - L
+buth_198,Anormal,LSIL
+buth_200,Anormal,LSIL
+buth_205,Anormal,LSIL
+buth_210,Anormal,LSIL
+buth_213,Anormal,ASCUS - H
+buth_217,Anormal,LSIL
+buth_218,Anormal,ASCUS - L
+buth_219,Anormal,LSIL
+buth_220,Anormal,ASCUS - H
+buth_222,Anormal,HSIL -CIN II Severe inflammation
+buth_232,Anormal,LSIL
+buth_235,Anormal,ASCUS - L
+buth_237,Anormal,HSIL -CIN II
+buth_241,Anormal,HSIL -CIN II
+buth_245,Anormal,ASCUS - H
+buth_248,Anormal,LSIL
+buth_251,Anormal,HSIL -CIN II
+buth_253,Anormal,HSIL -CIN II
+buth_257,Anormal,LSIL - HPV
+buth_272,Anormal,LSIL
+buth_273,Anormal,ASCUS - H
+buth_275,Anormal,LSIL
+buth_276,Anormal,HSIL -CIN II
+buth_277,Anormal,LSIL - HPV
+buth_280,Anormal,ASCUS - L
+buth_281,Anormal,REACTIVE WITH MODERATE INFLAMMATION
+buth_283,Anormal,ASCUS - H
+buth_284,Anormal,LSIL - WITH MODERATE INFLAMMATION
+buth_285,Anormal,HSIL -CIN II WITH MODERATE INFLAMMATION
+buth_289,Anormal,ASCUS - H WITH MODERATE INFLAMMATION
+buth_291,Anormal,LSIL - WITH MODERATE INFLAMMATION
+buth_295,Anormal,HSIL -CIN II WITH SEVERE INFLAMMATION
+buth_297,Anormal,LSIL
+buth_302,Anormal,ASCUS - L
+buth_304,Anormal,LSIL
+buth_306,Anormal,HSIL -CIN II
+buth_307,Anormal,ASCUS - H
+buth_311,Anormal,ASCUS - H
+buth_312,Anormal,LSIL - HPV
+buth_314,Anormal,ASCUS - L
+buth_317,Anormal,ASCUS - L
+buth_323,Anormal,HSIL -CIN II
+buth_324,Anormal,HSIL -CIN III
+buth_328,Anormal,HSIL -CIN II
+buth_330,Anormal,ASCUS - WITH MILD INFLAMMATION
+buth_335,Anormal,ASCUS - H
+buth_337,Anormal,ASCUS - L WITH MILD INFLAMMATION
+buth_340,Anormal,ATROPHIC SMEAR  - H WITH MILD INFLAMMATION
+buth_342,Anormal,LSIL
+buth_345,Anormal,ASCUS - H

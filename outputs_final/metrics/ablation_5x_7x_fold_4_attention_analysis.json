@@ -1,0 +1,76 @@
+{
+  "magnification_labels": [
+    "5x",
+    "7x"
+  ],
+  "global": {
+    "5x": {
+      "mean": 0.46263838,
+      "std": 0.09877631686891561,
+      "median": 0.46435505,
+      "q25": 0.38766149,
+      "q75": 0.524759085
+    },
+    "7x": {
+      "mean": 0.5373616350793651,
+      "std": 0.09877631455463211,
+      "median": 0.535645,
+      "q25": 0.475240915,
+      "q75": 0.61233855
+    }
+  },
+  "by_class": {
+    "normal": {
+      "5x": {
+        "mean": 0.469808476,
+        "std": 0.10485805558898419
+      },
+      "7x": {
+        "mean": 0.53019154,
+        "std": 0.10485805056517908
+      }
+    },
+    "abnormal": {
+      "5x": {
+        "mean": 0.45016864782608695,
+        "std": 0.08802714684796914
+      },
+      "7x": {
+        "mean": 0.5498313656521738,
+        "std": 0.08802715051157971
+      }
+    }
+  },
+  "by_fold": {
+    "fold_4": {
+      "5x": {
+        "mean": 0.46263838,
+        "std": 0.09877631686891561
+      },
+      "7x": {
+        "mean": 0.5373616350793651,
+        "std": 0.09877631455463211
+      }
+    }
+  },
+  "friedman_test": {
+    "error": "At least 3 samples must be given for Friedman test, got 2."
+  },
+  "pairwise_wilcoxon": {
+    "5x_vs_7x": {
+      "statistic": 616.0,
+      "p_value": 0.007281661990085256,
+      "significant_bonferroni": true
+    }
+  },
+  "ranking": [
+    {
+      "magnification": "7x",
+      "mean_attention": 0.5373616350793651
+    },
+    {
+      "magnification": "5x",
+      "mean_attention": 0.46263838
+    }
+  ]
+}

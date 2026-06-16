@@ -1,0 +1,457 @@
+[2026-06-09 16:42:34] INFO - Device: cuda
+[2026-06-09 16:42:34] INFO - GPU: NVIDIA GeForce RTX 3090
+[2026-06-09 16:42:34] INFO - Loaded manifest: 321 patients
+[2026-06-09 16:42:34] INFO -   Normal: 203, Abnormal: 118
+[2026-06-09 16:42:34] INFO - 
+  Balanced Problem-Patient Split:
+[2026-06-09 16:42:34] INFO -     Fold 0: val=65 (Normal=41, Abnormal=24) | problem=6 (N=5, A=1), clean=59
+[2026-06-09 16:42:34] INFO -     Fold 1: val=65 (Normal=41, Abnormal=24) | problem=6 (N=5, A=1), clean=59
+[2026-06-09 16:42:34] INFO -     Fold 2: val=65 (Normal=41, Abnormal=24) | problem=6 (N=5, A=1), clean=59
+[2026-06-09 16:42:34] INFO -     Fold 3: val=63 (Normal=40, Abnormal=23) | problem=5 (N=4, A=1), clean=58
+[2026-06-09 16:42:34] INFO -     Fold 4: val=63 (Normal=40, Abnormal=23) | problem=5 (N=4, A=1), clean=58
+[2026-06-09 16:42:34] INFO - 
+============================================================
+[2026-06-09 16:42:34] INFO -   FOLD 1/5 — Condition: post
+[2026-06-09 16:42:34] INFO -   Train: 256 patients | Val: 65 patients
+[2026-06-09 16:42:34] INFO - ============================================================
+[2026-06-09 16:42:37] INFO -   Compiling model with torch.compile() for speedup...
+[2026-06-09 16:44:00] INFO -   Epoch   1/150 | Train Loss: 1.0015 AUC: 0.4555 | Val Loss: 0.8780 AUC: 0.6006 Sens: 0.750 Spec: 0.512 | 82.6s
+[2026-06-09 16:44:00] INFO -   ★ New best val AUC: 0.6006 (in memory)
+[2026-06-09 16:44:09] INFO -   Epoch   2/150 | Train Loss: 0.9235 AUC: 0.4949 | Val Loss: 0.8837 AUC: 0.5788 Sens: 0.917 Spec: 0.341 | 9.0s
+[2026-06-09 16:44:14] INFO -   Epoch   3/150 | Train Loss: 0.9437 AUC: 0.4321 | Val Loss: 0.8864 AUC: 0.5610 Sens: 0.792 Spec: 0.439 | 4.4s
+[2026-06-09 16:44:19] INFO -   Epoch   4/150 | Train Loss: 0.8953 AUC: 0.5697 | Val Loss: 0.8839 AUC: 0.5783 Sens: 0.875 Spec: 0.341 | 5.8s
+[2026-06-09 16:44:24] INFO -   Epoch   5/150 | Train Loss: 0.9027 AUC: 0.5248 | Val Loss: 0.8849 AUC: 0.5401 Sens: 0.667 Spec: 0.537 | 4.7s
+[2026-06-09 16:44:30] INFO -   Epoch   6/150 | Train Loss: 0.8756 AUC: 0.5816 | Val Loss: 0.8809 AUC: 0.5884 Sens: 0.833 Spec: 0.366 | 5.7s
+[2026-06-09 16:44:35] INFO -   Epoch   7/150 | Train Loss: 0.8884 AUC: 0.5899 | Val Loss: 0.8806 AUC: 0.5833 Sens: 0.875 Spec: 0.341 | 4.8s
+[2026-06-09 16:44:40] INFO -   Epoch   8/150 | Train Loss: 0.8657 AUC: 0.6516 | Val Loss: 0.8805 AUC: 0.5722 Sens: 0.625 Spec: 0.561 | 4.9s
+[2026-06-09 16:44:45] INFO -   Epoch   9/150 | Train Loss: 0.8319 AUC: 0.6895 | Val Loss: 0.8808 AUC: 0.5762 Sens: 0.458 Spec: 0.732 | 5.3s
+[2026-06-09 16:44:49] INFO -   Epoch  10/150 | Train Loss: 0.8440 AUC: 0.6720 | Val Loss: 0.8813 AUC: 0.5701 Sens: 0.292 Spec: 0.927 | 4.5s
+[2026-06-09 16:44:55] INFO -   Epoch  11/150 | Train Loss: 0.8717 AUC: 0.6283 | Val Loss: 0.8773 AUC: 0.5757 Sens: 0.333 Spec: 0.854 | 5.6s
+[2026-06-09 16:44:59] INFO -   Epoch  12/150 | Train Loss: 0.8358 AUC: 0.6550 | Val Loss: 0.8771 AUC: 0.5701 Sens: 0.500 Spec: 0.683 | 4.3s
+[2026-06-09 16:45:06] INFO -   Epoch  13/150 | Train Loss: 0.8659 AUC: 0.6157 | Val Loss: 0.8814 AUC: 0.5295 Sens: 0.750 Spec: 0.390 | 6.3s
+[2026-06-09 16:45:10] INFO -   Epoch  14/150 | Train Loss: 0.8597 AUC: 0.6496 | Val Loss: 0.8806 AUC: 0.5427 Sens: 0.875 Spec: 0.317 | 4.4s
+[2026-06-09 16:45:15] INFO -   Epoch  15/150 | Train Loss: 0.8366 AUC: 0.6717 | Val Loss: 0.8718 AUC: 0.6077 Sens: 0.625 Spec: 0.659 | 5.4s
+[2026-06-09 16:45:15] INFO -   ★ New best val AUC: 0.6077 (in memory)
+[2026-06-09 16:45:21] INFO -   Epoch  16/150 | Train Loss: 0.8500 AUC: 0.6911 | Val Loss: 0.8712 AUC: 0.6077 Sens: 0.542 Spec: 0.707 | 5.3s
+[2026-06-09 16:45:26] INFO -   Epoch  17/150 | Train Loss: 0.8028 AUC: 0.7225 | Val Loss: 0.8742 AUC: 0.6006 Sens: 0.667 Spec: 0.634 | 5.0s
+[2026-06-09 16:45:30] INFO -   Epoch  18/150 | Train Loss: 0.8124 AUC: 0.7231 | Val Loss: 0.8702 AUC: 0.6270 Sens: 0.833 Spec: 0.512 | 4.5s
+[2026-06-09 16:45:30] INFO -   ★ New best val AUC: 0.6270 (in memory)
+[2026-06-09 16:45:36] INFO -   Epoch  19/150 | Train Loss: 0.8603 AUC: 0.6593 | Val Loss: 0.8677 AUC: 0.6331 Sens: 0.833 Spec: 0.512 | 5.3s
+[2026-06-09 16:45:36] INFO -   ★ New best val AUC: 0.6331 (in memory)
+[2026-06-09 16:45:40] INFO -   Epoch  20/150 | Train Loss: 0.7580 AUC: 0.7488 | Val Loss: 0.8699 AUC: 0.6280 Sens: 0.625 Spec: 0.683 | 4.1s
+[2026-06-09 16:45:45] INFO -   Epoch  21/150 | Train Loss: 0.8245 AUC: 0.6964 | Val Loss: 0.8661 AUC: 0.6484 Sens: 0.833 Spec: 0.561 | 5.4s
+[2026-06-09 16:45:45] INFO -   ★ New best val AUC: 0.6484 (in memory)
+[2026-06-09 16:45:49] INFO -   Epoch  22/150 | Train Loss: 0.7796 AUC: 0.7196 | Val Loss: 0.8658 AUC: 0.6443 Sens: 0.917 Spec: 0.415 | 3.6s
+[2026-06-09 16:45:55] INFO -   Epoch  23/150 | Train Loss: 0.7561 AUC: 0.7712 | Val Loss: 0.8668 AUC: 0.6413 Sens: 0.958 Spec: 0.390 | 5.9s
+[2026-06-09 16:45:58] INFO -   Epoch  24/150 | Train Loss: 0.7638 AUC: 0.7588 | Val Loss: 0.8743 AUC: 0.5971 Sens: 0.625 Spec: 0.659 | 3.6s
+[2026-06-09 16:46:04] INFO -   Epoch  25/150 | Train Loss: 0.7577 AUC: 0.7682 | Val Loss: 0.8812 AUC: 0.5813 Sens: 0.792 Spec: 0.512 | 5.4s
+[2026-06-09 16:46:07] INFO -   Epoch  26/150 | Train Loss: 0.7261 AUC: 0.7822 | Val Loss: 0.8789 AUC: 0.5864 Sens: 0.708 Spec: 0.634 | 3.8s
+[2026-06-09 16:46:12] INFO -   Epoch  27/150 | Train Loss: 0.7650 AUC: 0.7300 | Val Loss: 0.8684 AUC: 0.6260 Sens: 0.792 Spec: 0.585 | 5.0s
+[2026-06-09 16:46:17] INFO -   Epoch  28/150 | Train Loss: 0.8016 AUC: 0.7197 | Val Loss: 0.8610 AUC: 0.6565 Sens: 0.875 Spec: 0.512 | 4.2s
+[2026-06-09 16:46:17] INFO -   ★ New best val AUC: 0.6565 (in memory)
+[2026-06-09 16:46:21] INFO -   Epoch  29/150 | Train Loss: 0.7297 AUC: 0.7864 | Val Loss: 0.8620 AUC: 0.6596 Sens: 0.875 Spec: 0.561 | 4.5s
+[2026-06-09 16:46:21] INFO -   ★ New best val AUC: 0.6596 (in memory)
+[2026-06-09 16:46:26] INFO -   Epoch  30/150 | Train Loss: 0.7690 AUC: 0.7540 | Val Loss: 0.8534 AUC: 0.6728 Sens: 0.917 Spec: 0.537 | 5.0s
+[2026-06-09 16:46:26] INFO -   ★ New best val AUC: 0.6728 (in memory)
+[2026-06-09 16:46:30] INFO -   Epoch  31/150 | Train Loss: 0.7419 AUC: 0.7691 | Val Loss: 0.8532 AUC: 0.6717 Sens: 0.917 Spec: 0.512 | 3.7s
+[2026-06-09 16:46:36] INFO -   Epoch  32/150 | Train Loss: 0.7606 AUC: 0.7558 | Val Loss: 0.8502 AUC: 0.6758 Sens: 0.750 Spec: 0.659 | 5.8s
+[2026-06-09 16:46:36] INFO -   ★ New best val AUC: 0.6758 (in memory)
+[2026-06-09 16:46:39] INFO -   Epoch  33/150 | Train Loss: 0.7261 AUC: 0.7912 | Val Loss: 0.8513 AUC: 0.6809 Sens: 0.792 Spec: 0.585 | 3.8s
+[2026-06-09 16:46:39] INFO -   ★ New best val AUC: 0.6809 (in memory)
+[2026-06-09 16:46:45] INFO -   Epoch  34/150 | Train Loss: 0.6992 AUC: 0.8034 | Val Loss: 0.8501 AUC: 0.6728 Sens: 0.875 Spec: 0.561 | 5.6s
+[2026-06-09 16:46:49] INFO -   Epoch  35/150 | Train Loss: 0.7213 AUC: 0.7941 | Val Loss: 0.8502 AUC: 0.6667 Sens: 0.750 Spec: 0.634 | 4.1s
+[2026-06-09 16:46:54] INFO -   Epoch  36/150 | Train Loss: 0.7043 AUC: 0.8196 | Val Loss: 0.8635 AUC: 0.6397 Sens: 0.708 Spec: 0.659 | 4.8s
+[2026-06-09 16:46:59] INFO -   Epoch  37/150 | Train Loss: 0.6628 AUC: 0.8376 | Val Loss: 0.8636 AUC: 0.6352 Sens: 0.667 Spec: 0.659 | 4.6s
+[2026-06-09 16:47:03] INFO -   Epoch  38/150 | Train Loss: 0.6701 AUC: 0.8253 | Val Loss: 0.8542 AUC: 0.6535 Sens: 0.833 Spec: 0.610 | 4.2s
+[2026-06-09 16:47:08] INFO -   Epoch  39/150 | Train Loss: 0.6245 AUC: 0.8631 | Val Loss: 0.8531 AUC: 0.6657 Sens: 0.792 Spec: 0.610 | 5.0s
+[2026-06-09 16:47:12] INFO -   Epoch  40/150 | Train Loss: 0.6462 AUC: 0.8416 | Val Loss: 0.8609 AUC: 0.6575 Sens: 0.708 Spec: 0.732 | 4.0s
+[2026-06-09 16:47:15] INFO -   Epoch  41/150 | Train Loss: 0.6804 AUC: 0.8165 | Val Loss: 0.8653 AUC: 0.6453 Sens: 0.708 Spec: 0.756 | 3.6s
+[2026-06-09 16:47:21] INFO -   Epoch  42/150 | Train Loss: 0.6177 AUC: 0.8623 | Val Loss: 0.8621 AUC: 0.6484 Sens: 0.667 Spec: 0.756 | 5.5s
+[2026-06-09 16:47:25] INFO -   Epoch  43/150 | Train Loss: 0.6718 AUC: 0.8210 | Val Loss: 0.8635 AUC: 0.6585 Sens: 0.708 Spec: 0.732 | 4.3s
+[2026-06-09 16:47:29] INFO -   Epoch  44/150 | Train Loss: 0.6116 AUC: 0.8584 | Val Loss: 0.8514 AUC: 0.6611 Sens: 0.667 Spec: 0.707 | 4.3s
+[2026-06-09 16:47:34] INFO -   Epoch  45/150 | Train Loss: 0.6265 AUC: 0.8520 | Val Loss: 0.8594 AUC: 0.6626 Sens: 0.833 Spec: 0.537 | 5.0s
+[2026-06-09 16:47:39] INFO -   Epoch  46/150 | Train Loss: 0.5687 AUC: 0.8844 | Val Loss: 0.8550 AUC: 0.6646 Sens: 0.792 Spec: 0.634 | 4.2s
+[2026-06-09 16:47:44] INFO -   Epoch  47/150 | Train Loss: 0.6624 AUC: 0.8442 | Val Loss: 0.8425 AUC: 0.6789 Sens: 0.792 Spec: 0.610 | 5.4s
+[2026-06-09 16:47:48] INFO -   Epoch  48/150 | Train Loss: 0.6685 AUC: 0.8234 | Val Loss: 0.8255 AUC: 0.6911 Sens: 0.750 Spec: 0.732 | 3.6s
+[2026-06-09 16:47:48] INFO -   ★ New best val AUC: 0.6911 (in memory)
+[2026-06-09 16:47:53] INFO -   Epoch  49/150 | Train Loss: 0.6043 AUC: 0.8628 | Val Loss: 0.8358 AUC: 0.6890 Sens: 0.833 Spec: 0.659 | 5.6s
+[2026-06-09 16:47:57] INFO -   Epoch  50/150 | Train Loss: 0.6549 AUC: 0.8381 | Val Loss: 0.8513 AUC: 0.6616 Sens: 0.833 Spec: 0.683 | 3.9s
+[2026-06-09 16:48:02] INFO -   Epoch  51/150 | Train Loss: 0.6092 AUC: 0.8641 | Val Loss: 0.8753 AUC: 0.6392 Sens: 0.833 Spec: 0.561 | 5.0s
+[2026-06-09 16:48:06] INFO -   Epoch  52/150 | Train Loss: 0.6003 AUC: 0.8781 | Val Loss: 0.8774 AUC: 0.6387 Sens: 0.750 Spec: 0.585 | 4.1s
+[2026-06-09 16:48:11] INFO -   Epoch  53/150 | Train Loss: 0.6125 AUC: 0.8730 | Val Loss: 0.8897 AUC: 0.6494 Sens: 0.708 Spec: 0.659 | 4.1s
+[2026-06-09 16:48:16] INFO -   Epoch  54/150 | Train Loss: 0.5723 AUC: 0.8908 | Val Loss: 0.8839 AUC: 0.6687 Sens: 0.833 Spec: 0.561 | 5.3s
+[2026-06-09 16:48:20] INFO -   Epoch  55/150 | Train Loss: 0.5672 AUC: 0.8835 | Val Loss: 0.9130 AUC: 0.6463 Sens: 0.833 Spec: 0.537 | 4.2s
+[2026-06-09 16:48:25] INFO -   Epoch  56/150 | Train Loss: 0.5420 AUC: 0.8890 | Val Loss: 0.9501 AUC: 0.6453 Sens: 0.708 Spec: 0.659 | 5.3s
+[2026-06-09 16:48:29] INFO -   Epoch  57/150 | Train Loss: 0.5452 AUC: 0.9016 | Val Loss: 0.9336 AUC: 0.6438 Sens: 0.708 Spec: 0.659 | 3.8s
+[2026-06-09 16:48:35] INFO -   Epoch  58/150 | Train Loss: 0.5472 AUC: 0.8833 | Val Loss: 0.9773 AUC: 0.6484 Sens: 0.708 Spec: 0.659 | 5.7s
+[2026-06-09 16:48:39] INFO -   Epoch  59/150 | Train Loss: 0.5388 AUC: 0.8928 | Val Loss: 0.9921 AUC: 0.6545 Sens: 0.875 Spec: 0.512 | 3.9s
+[2026-06-09 16:48:44] INFO -   Epoch  60/150 | Train Loss: 0.4706 AUC: 0.9255 | Val Loss: 0.9614 AUC: 0.6667 Sens: 0.958 Spec: 0.488 | 5.8s
+[2026-06-09 16:48:48] INFO -   Epoch  61/150 | Train Loss: 0.5941 AUC: 0.8733 | Val Loss: 0.9434 AUC: 0.6585 Sens: 0.958 Spec: 0.463 | 3.9s
+[2026-06-09 16:48:53] INFO -   Epoch  62/150 | Train Loss: 0.5529 AUC: 0.8949 | Val Loss: 0.9379 AUC: 0.6768 Sens: 0.792 Spec: 0.610 | 5.0s
+[2026-06-09 16:48:57] INFO -   Epoch  63/150 | Train Loss: 0.5287 AUC: 0.9011 | Val Loss: 0.9722 AUC: 0.6646 Sens: 0.667 Spec: 0.707 | 4.1s
+[2026-06-09 16:49:02] INFO -   Epoch  64/150 | Train Loss: 0.5704 AUC: 0.8827 | Val Loss: 0.9342 AUC: 0.6723 Sens: 0.708 Spec: 0.732 | 4.6s
+[2026-06-09 16:49:07] INFO -   Epoch  65/150 | Train Loss: 0.5381 AUC: 0.9017 | Val Loss: 0.9525 AUC: 0.6601 Sens: 0.667 Spec: 0.732 | 5.3s
+[2026-06-09 16:49:11] INFO -   Epoch  66/150 | Train Loss: 0.5489 AUC: 0.8942 | Val Loss: 0.9952 AUC: 0.6687 Sens: 0.667 Spec: 0.732 | 4.0s
+[2026-06-09 16:49:17] INFO -   Epoch  67/150 | Train Loss: 0.5273 AUC: 0.8977 | Val Loss: 1.0301 AUC: 0.6687 Sens: 0.708 Spec: 0.683 | 5.7s
+[2026-06-09 16:49:21] INFO -   Epoch  68/150 | Train Loss: 0.4828 AUC: 0.9233 | Val Loss: 0.9972 AUC: 0.6626 Sens: 0.833 Spec: 0.585 | 3.7s
+[2026-06-09 16:49:26] INFO -   Epoch  69/150 | Train Loss: 0.4871 AUC: 0.9204 | Val Loss: 1.0909 AUC: 0.6301 Sens: 0.792 Spec: 0.585 | 5.7s
+[2026-06-09 16:49:30] INFO -   Epoch  70/150 | Train Loss: 0.4924 AUC: 0.9135 | Val Loss: 1.0353 AUC: 0.6448 Sens: 0.750 Spec: 0.610 | 4.0s
+[2026-06-09 16:49:36] INFO -   Epoch  71/150 | Train Loss: 0.5272 AUC: 0.9050 | Val Loss: 1.0756 AUC: 0.6463 Sens: 0.792 Spec: 0.610 | 5.3s
+[2026-06-09 16:49:40] INFO -   Epoch  72/150 | Train Loss: 0.5024 AUC: 0.9103 | Val Loss: 1.0092 AUC: 0.6545 Sens: 0.833 Spec: 0.537 | 4.3s
+[2026-06-09 16:49:44] INFO -   Epoch  73/150 | Train Loss: 0.4570 AUC: 0.9360 | Val Loss: 1.0263 AUC: 0.6646 Sens: 0.750 Spec: 0.585 | 4.1s
+[2026-06-09 16:49:50] INFO -   Epoch  74/150 | Train Loss: 0.4671 AUC: 0.9209 | Val Loss: 0.9658 AUC: 0.6514 Sens: 0.917 Spec: 0.415 | 5.5s
+[2026-06-09 16:49:54] INFO -   Epoch  75/150 | Train Loss: 0.5442 AUC: 0.8995 | Val Loss: 0.9715 AUC: 0.6463 Sens: 0.833 Spec: 0.488 | 4.1s
+[2026-06-09 16:50:00] INFO -   Epoch  76/150 | Train Loss: 0.4823 AUC: 0.9186 | Val Loss: 1.0109 AUC: 0.6392 Sens: 0.792 Spec: 0.561 | 5.8s
+[2026-06-09 16:50:03] INFO -   Epoch  77/150 | Train Loss: 0.4485 AUC: 0.9195 | Val Loss: 1.0938 AUC: 0.6494 Sens: 0.792 Spec: 0.561 | 3.6s
+[2026-06-09 16:50:09] INFO -   Epoch  78/150 | Train Loss: 0.4066 AUC: 0.9534 | Val Loss: 1.0811 AUC: 0.6519 Sens: 0.625 Spec: 0.707 | 5.8s
+[2026-06-09 16:50:09] INFO -   Early stopping at epoch 78 (patience=30)
+[2026-06-09 16:50:12] INFO -   TTA:    AUC=0.6819 Sens=0.750 Spec=0.756
+[2026-06-09 16:50:12] INFO -   Fold 0 best val AUC: 0.6911
+[2026-06-09 16:50:12] INFO -   Final metrics: {'auc': 0.6910569105691057, 'sensitivity': 0.75, 'specificity': 0.7317073170731707, 'f1': 0.6792452830188679, 'accuracy': 0.7384615384615385, 'ppv': 0.6206896551724138, 'npv': 0.8333333333333334, 'threshold': 0.46860820055007935, 'tp': 18, 'fp': 11, 'tn': 30, 'fn': 6, 'loss': 0.8255477134998028}
+[2026-06-09 16:50:12] INFO - 
+============================================================
+[2026-06-09 16:50:12] INFO -   FOLD 2/5 — Condition: post
+[2026-06-09 16:50:12] INFO -   Train: 256 patients | Val: 65 patients
+[2026-06-09 16:50:12] INFO - ============================================================
+[2026-06-09 16:50:12] INFO -   Compiling model with torch.compile() for speedup...
+[2026-06-09 16:50:17] INFO -   Epoch   1/150 | Train Loss: 0.9061 AUC: 0.5207 | Val Loss: 0.9010 AUC: 0.5188 Sens: 0.375 Spec: 0.780 | 4.5s
+[2026-06-09 16:50:17] INFO -   ★ New best val AUC: 0.5188 (in memory)
+[2026-06-09 16:50:22] INFO -   Epoch   2/150 | Train Loss: 0.8774 AUC: 0.5917 | Val Loss: 0.9013 AUC: 0.5239 Sens: 0.958 Spec: 0.195 | 4.9s
+[2026-06-09 16:50:22] INFO -   ★ New best val AUC: 0.5239 (in memory)
+[2026-06-09 16:50:26] INFO -   Epoch   3/150 | Train Loss: 0.9092 AUC: 0.5489 | Val Loss: 0.9038 AUC: 0.5595 Sens: 0.208 Spec: 0.951 | 4.6s
+[2026-06-09 16:50:26] INFO -   ★ New best val AUC: 0.5595 (in memory)
+[2026-06-09 16:50:32] INFO -   Epoch   4/150 | Train Loss: 0.9274 AUC: 0.4502 | Val Loss: 0.9040 AUC: 0.5290 Sens: 0.875 Spec: 0.244 | 5.2s
+[2026-06-09 16:50:36] INFO -   Epoch   5/150 | Train Loss: 0.9018 AUC: 0.5395 | Val Loss: 0.9027 AUC: 0.5549 Sens: 0.792 Spec: 0.366 | 4.1s
+[2026-06-09 16:50:42] INFO -   Epoch   6/150 | Train Loss: 0.8867 AUC: 0.5391 | Val Loss: 0.9018 AUC: 0.5671 Sens: 0.542 Spec: 0.707 | 6.2s
+[2026-06-09 16:50:42] INFO -   ★ New best val AUC: 0.5671 (in memory)
+[2026-06-09 16:50:46] INFO -   Epoch   7/150 | Train Loss: 0.8835 AUC: 0.6392 | Val Loss: 0.9042 AUC: 0.5467 Sens: 0.500 Spec: 0.683 | 3.7s
+[2026-06-09 16:50:51] INFO -   Epoch   8/150 | Train Loss: 0.8839 AUC: 0.5955 | Val Loss: 0.9016 AUC: 0.5422 Sens: 0.792 Spec: 0.341 | 5.7s
+[2026-06-09 16:50:55] INFO -   Epoch   9/150 | Train Loss: 0.8627 AUC: 0.6558 | Val Loss: 0.9013 AUC: 0.5564 Sens: 0.833 Spec: 0.317 | 3.9s
+[2026-06-09 16:51:00] INFO -   Epoch  10/150 | Train Loss: 0.8501 AUC: 0.6397 | Val Loss: 0.9010 AUC: 0.5264 Sens: 0.667 Spec: 0.463 | 5.1s
+[2026-06-09 16:51:05] INFO -   Epoch  11/150 | Train Loss: 0.8508 AUC: 0.6499 | Val Loss: 0.8972 AUC: 0.5300 Sens: 0.625 Spec: 0.585 | 4.4s
+[2026-06-09 16:51:09] INFO -   Epoch  12/150 | Train Loss: 0.8490 AUC: 0.6632 | Val Loss: 0.8978 AUC: 0.5620 Sens: 0.667 Spec: 0.561 | 4.0s
+[2026-06-09 16:51:14] INFO -   Epoch  13/150 | Train Loss: 0.8725 AUC: 0.6274 | Val Loss: 0.8949 AUC: 0.5899 Sens: 0.750 Spec: 0.488 | 5.3s
+[2026-06-09 16:51:14] INFO -   ★ New best val AUC: 0.5899 (in memory)
+[2026-06-09 16:51:18] INFO -   Epoch  14/150 | Train Loss: 0.7838 AUC: 0.7390 | Val Loss: 0.8943 AUC: 0.5884 Sens: 0.750 Spec: 0.488 | 3.9s
+[2026-06-09 16:51:24] INFO -   Epoch  15/150 | Train Loss: 0.8093 AUC: 0.6959 | Val Loss: 0.8983 AUC: 0.5630 Sens: 0.750 Spec: 0.415 | 5.9s
+[2026-06-09 16:51:28] INFO -   Epoch  16/150 | Train Loss: 0.8037 AUC: 0.7057 | Val Loss: 0.8901 AUC: 0.6016 Sens: 0.792 Spec: 0.463 | 4.0s
+[2026-06-09 16:51:28] INFO -   ★ New best val AUC: 0.6016 (in memory)
+[2026-06-09 16:51:34] INFO -   Epoch  17/150 | Train Loss: 0.8093 AUC: 0.7196 | Val Loss: 0.8915 AUC: 0.6260 Sens: 0.667 Spec: 0.659 | 5.9s
+[2026-06-09 16:51:34] INFO -   ★ New best val AUC: 0.6260 (in memory)
+[2026-06-09 16:51:38] INFO -   Epoch  18/150 | Train Loss: 0.7885 AUC: 0.7227 | Val Loss: 0.8949 AUC: 0.6148 Sens: 0.750 Spec: 0.561 | 4.2s
+[2026-06-09 16:51:43] INFO -   Epoch  19/150 | Train Loss: 0.7374 AUC: 0.7818 | Val Loss: 0.8958 AUC: 0.6402 Sens: 0.875 Spec: 0.463 | 4.9s
+[2026-06-09 16:51:43] INFO -   ★ New best val AUC: 0.6402 (in memory)
+[2026-06-09 16:51:48] INFO -   Epoch  20/150 | Train Loss: 0.7881 AUC: 0.7561 | Val Loss: 0.8935 AUC: 0.6474 Sens: 0.917 Spec: 0.488 | 4.9s
+[2026-06-09 16:51:48] INFO -   ★ New best val AUC: 0.6474 (in memory)
+[2026-06-09 16:51:52] INFO -   Epoch  21/150 | Train Loss: 0.7420 AUC: 0.7863 | Val Loss: 0.8882 AUC: 0.6189 Sens: 0.833 Spec: 0.488 | 4.1s
+[2026-06-09 16:51:57] INFO -   Epoch  22/150 | Train Loss: 0.7884 AUC: 0.7259 | Val Loss: 0.8883 AUC: 0.5884 Sens: 0.875 Spec: 0.366 | 5.2s
+[2026-06-09 16:52:02] INFO -   Epoch  23/150 | Train Loss: 0.7520 AUC: 0.7717 | Val Loss: 0.8920 AUC: 0.5803 Sens: 0.875 Spec: 0.415 | 5.3s
+[2026-06-09 16:52:09] INFO -   Epoch  24/150 | Train Loss: 0.7260 AUC: 0.7861 | Val Loss: 0.8915 AUC: 0.5945 Sens: 0.583 Spec: 0.659 | 6.8s
+[2026-06-09 16:52:14] INFO -   Epoch  25/150 | Train Loss: 0.7301 AUC: 0.7795 | Val Loss: 0.8857 AUC: 0.6255 Sens: 0.875 Spec: 0.439 | 4.4s
+[2026-06-09 16:52:20] INFO -   Epoch  26/150 | Train Loss: 0.7549 AUC: 0.7589 | Val Loss: 0.8876 AUC: 0.6184 Sens: 0.833 Spec: 0.488 | 6.6s
+[2026-06-09 16:52:24] INFO -   Epoch  27/150 | Train Loss: 0.8282 AUC: 0.7184 | Val Loss: 0.8941 AUC: 0.5793 Sens: 0.833 Spec: 0.488 | 3.9s
+[2026-06-09 16:52:30] INFO -   Epoch  28/150 | Train Loss: 0.7162 AUC: 0.8046 | Val Loss: 0.8883 AUC: 0.5864 Sens: 0.792 Spec: 0.463 | 6.0s
+[2026-06-09 16:52:34] INFO -   Epoch  29/150 | Train Loss: 0.7024 AUC: 0.8036 | Val Loss: 0.8956 AUC: 0.5813 Sens: 0.750 Spec: 0.488 | 3.7s
+[2026-06-09 16:52:39] INFO -   Epoch  30/150 | Train Loss: 0.7186 AUC: 0.7967 | Val Loss: 0.8902 AUC: 0.5752 Sens: 0.708 Spec: 0.561 | 5.5s
+[2026-06-09 16:52:44] INFO -   Epoch  31/150 | Train Loss: 0.7213 AUC: 0.7948 | Val Loss: 0.8942 AUC: 0.5518 Sens: 0.875 Spec: 0.366 | 4.6s
+[2026-06-09 16:52:49] INFO -   Epoch  32/150 | Train Loss: 0.7955 AUC: 0.7208 | Val Loss: 0.9004 AUC: 0.5213 Sens: 0.500 Spec: 0.634 | 4.9s
+[2026-06-09 16:52:54] INFO -   Epoch  33/150 | Train Loss: 0.6559 AUC: 0.8306 | Val Loss: 0.9015 AUC: 0.5254 Sens: 0.792 Spec: 0.366 | 4.9s
+[2026-06-09 16:52:58] INFO -   Epoch  34/150 | Train Loss: 0.7080 AUC: 0.7885 | Val Loss: 0.8926 AUC: 0.5457 Sens: 0.750 Spec: 0.463 | 4.1s
+[2026-06-09 16:53:03] INFO -   Epoch  35/150 | Train Loss: 0.6900 AUC: 0.8181 | Val Loss: 0.8912 AUC: 0.5640 Sens: 0.792 Spec: 0.463 | 5.2s
+[2026-06-09 16:53:07] INFO -   Epoch  36/150 | Train Loss: 0.6661 AUC: 0.8316 | Val Loss: 0.9005 AUC: 0.5549 Sens: 0.667 Spec: 0.610 | 4.3s
+[2026-06-09 16:53:13] INFO -   Epoch  37/150 | Train Loss: 0.7691 AUC: 0.7589 | Val Loss: 0.8967 AUC: 0.5528 Sens: 0.667 Spec: 0.488 | 5.5s
+[2026-06-09 16:53:16] INFO -   Epoch  38/150 | Train Loss: 0.7135 AUC: 0.7891 | Val Loss: 0.9006 AUC: 0.5427 Sens: 0.625 Spec: 0.561 | 3.4s
+[2026-06-09 16:53:22] INFO -   Epoch  39/150 | Train Loss: 0.6482 AUC: 0.8420 | Val Loss: 0.8927 AUC: 0.5447 Sens: 0.500 Spec: 0.659 | 5.4s
+[2026-06-09 16:53:26] INFO -   Epoch  40/150 | Train Loss: 0.6336 AUC: 0.8602 | Val Loss: 0.8957 AUC: 0.5508 Sens: 0.542 Spec: 0.610 | 4.6s
+[2026-06-09 16:53:32] INFO -   Epoch  41/150 | Train Loss: 0.6009 AUC: 0.8744 | Val Loss: 0.9044 AUC: 0.5229 Sens: 0.458 Spec: 0.683 | 5.4s
+[2026-06-09 16:53:36] INFO -   Epoch  42/150 | Train Loss: 0.6489 AUC: 0.8362 | Val Loss: 0.9144 AUC: 0.5244 Sens: 0.375 Spec: 0.756 | 4.5s
+[2026-06-09 16:53:41] INFO -   Epoch  43/150 | Train Loss: 0.6309 AUC: 0.8421 | Val Loss: 0.9247 AUC: 0.5274 Sens: 0.458 Spec: 0.707 | 4.6s
+[2026-06-09 16:53:46] INFO -   Epoch  44/150 | Train Loss: 0.6528 AUC: 0.8299 | Val Loss: 0.9234 AUC: 0.5244 Sens: 0.583 Spec: 0.561 | 4.9s
+[2026-06-09 16:53:50] INFO -   Epoch  45/150 | Train Loss: 0.5993 AUC: 0.8585 | Val Loss: 0.9239 AUC: 0.5234 Sens: 0.500 Spec: 0.659 | 4.4s
+[2026-06-09 16:53:55] INFO -   Epoch  46/150 | Train Loss: 0.5856 AUC: 0.8769 | Val Loss: 0.9297 AUC: 0.5030 Sens: 0.125 Spec: 0.976 | 5.1s
+[2026-06-09 16:54:00] INFO -   Epoch  47/150 | Train Loss: 0.6419 AUC: 0.8520 | Val Loss: 0.9294 AUC: 0.5071 Sens: 0.125 Spec: 0.976 | 4.3s
+[2026-06-09 16:54:05] INFO -   Epoch  48/150 | Train Loss: 0.5712 AUC: 0.8792 | Val Loss: 0.9512 AUC: 0.5000 Sens: 0.125 Spec: 0.976 | 5.6s
+[2026-06-09 16:54:09] INFO -   Epoch  49/150 | Train Loss: 0.5307 AUC: 0.9051 | Val Loss: 0.9496 AUC: 0.5356 Sens: 0.833 Spec: 0.390 | 3.6s
+[2026-06-09 16:54:15] INFO -   Epoch  50/150 | Train Loss: 0.5180 AUC: 0.9147 | Val Loss: 0.9437 AUC: 0.5244 Sens: 0.542 Spec: 0.585 | 5.7s
+[2026-06-09 16:54:15] INFO -   Early stopping at epoch 50 (patience=30)
+[2026-06-09 16:54:17] INFO -   TTA:    AUC=0.5579 Sens=0.875 Spec=0.317
+[2026-06-09 16:54:17] INFO -   Fold 1 best val AUC: 0.6474
+[2026-06-09 16:54:17] INFO -   Final metrics: {'auc': 0.6473577235772358, 'sensitivity': 0.9166666666666666, 'specificity': 0.4878048780487805, 'f1': 0.6567164179104478, 'accuracy': 0.6461538461538462, 'ppv': 0.5116279069767442, 'npv': 0.9090909090909091, 'threshold': 0.5846269726753235, 'tp': 22, 'fp': 21, 'tn': 20, 'fn': 2, 'loss': 0.8934898889981784}
+[2026-06-09 16:54:17] INFO - 
+============================================================
+[2026-06-09 16:54:17] INFO -   FOLD 3/5 — Condition: post
+[2026-06-09 16:54:17] INFO -   Train: 256 patients | Val: 65 patients
+[2026-06-09 16:54:17] INFO - ============================================================
+[2026-06-09 16:54:17] INFO -   Compiling model with torch.compile() for speedup...
+[2026-06-09 16:54:22] INFO -   Epoch   1/150 | Train Loss: 0.9261 AUC: 0.4693 | Val Loss: 0.9038 AUC: 0.4599 Sens: 0.333 Spec: 0.732 | 4.3s
+[2026-06-09 16:54:22] INFO -   ★ New best val AUC: 0.4599 (in memory)
+[2026-06-09 16:54:27] INFO -   Epoch   2/150 | Train Loss: 0.8976 AUC: 0.5271 | Val Loss: 0.9087 AUC: 0.5102 Sens: 0.167 Spec: 0.951 | 5.4s
+[2026-06-09 16:54:27] INFO -   ★ New best val AUC: 0.5102 (in memory)
+[2026-06-09 16:54:32] INFO -   Epoch   3/150 | Train Loss: 0.8855 AUC: 0.5404 | Val Loss: 0.9070 AUC: 0.5396 Sens: 0.583 Spec: 0.610 | 4.6s
+[2026-06-09 16:54:32] INFO -   ★ New best val AUC: 0.5396 (in memory)
+[2026-06-09 16:54:37] INFO -   Epoch   4/150 | Train Loss: 0.8978 AUC: 0.5803 | Val Loss: 0.9057 AUC: 0.5300 Sens: 0.625 Spec: 0.512 | 5.3s
+[2026-06-09 16:54:41] INFO -   Epoch   5/150 | Train Loss: 0.8707 AUC: 0.5738 | Val Loss: 0.9062 AUC: 0.5396 Sens: 0.750 Spec: 0.463 | 4.4s
+[2026-06-09 16:54:47] INFO -   Epoch   6/150 | Train Loss: 0.8994 AUC: 0.5442 | Val Loss: 0.9083 AUC: 0.5615 Sens: 0.625 Spec: 0.561 | 5.4s
+[2026-06-09 16:54:47] INFO -   ★ New best val AUC: 0.5615 (in memory)
+[2026-06-09 16:54:51] INFO -   Epoch   7/150 | Train Loss: 0.8872 AUC: 0.5627 | Val Loss: 0.9164 AUC: 0.5285 Sens: 0.208 Spec: 0.927 | 4.1s
+[2026-06-09 16:54:56] INFO -   Epoch   8/150 | Train Loss: 0.8885 AUC: 0.5850 | Val Loss: 0.9110 AUC: 0.5696 Sens: 0.292 Spec: 0.878 | 5.3s
+[2026-06-09 16:54:56] INFO -   ★ New best val AUC: 0.5696 (in memory)
+[2026-06-09 16:55:00] INFO -   Epoch   9/150 | Train Loss: 0.8679 AUC: 0.6444 | Val Loss: 0.9087 AUC: 0.5493 Sens: 0.500 Spec: 0.683 | 3.6s
+[2026-06-09 16:55:05] INFO -   Epoch  10/150 | Train Loss: 0.8479 AUC: 0.6691 | Val Loss: 0.9036 AUC: 0.5783 Sens: 0.333 Spec: 0.878 | 5.4s
+[2026-06-09 16:55:05] INFO -   ★ New best val AUC: 0.5783 (in memory)
+[2026-06-09 16:55:09] INFO -   Epoch  11/150 | Train Loss: 0.8134 AUC: 0.7138 | Val Loss: 0.9002 AUC: 0.6108 Sens: 0.333 Spec: 0.902 | 4.3s
+[2026-06-09 16:55:09] INFO -   ★ New best val AUC: 0.6108 (in memory)
+[2026-06-09 16:55:14] INFO -   Epoch  12/150 | Train Loss: 0.8647 AUC: 0.6407 | Val Loss: 0.8840 AUC: 0.6824 Sens: 0.542 Spec: 0.780 | 4.7s
+[2026-06-09 16:55:14] INFO -   ★ New best val AUC: 0.6824 (in memory)
+[2026-06-09 16:55:19] INFO -   Epoch  13/150 | Train Loss: 0.8273 AUC: 0.6931 | Val Loss: 0.8814 AUC: 0.6728 Sens: 0.583 Spec: 0.780 | 5.4s
+[2026-06-09 16:55:24] INFO -   Epoch  14/150 | Train Loss: 0.8582 AUC: 0.6500 | Val Loss: 0.8825 AUC: 0.6768 Sens: 0.667 Spec: 0.756 | 4.6s
+[2026-06-09 16:55:29] INFO -   Epoch  15/150 | Train Loss: 0.8173 AUC: 0.6689 | Val Loss: 0.8831 AUC: 0.6880 Sens: 0.625 Spec: 0.829 | 4.9s
+[2026-06-09 16:55:29] INFO -   ★ New best val AUC: 0.6880 (in memory)
+[2026-06-09 16:55:34] INFO -   Epoch  16/150 | Train Loss: 0.8222 AUC: 0.6863 | Val Loss: 0.8752 AUC: 0.7419 Sens: 0.750 Spec: 0.756 | 4.8s
+[2026-06-09 16:55:34] INFO -   ★ New best val AUC: 0.7419 (in memory)
+[2026-06-09 16:55:39] INFO -   Epoch  17/150 | Train Loss: 0.8085 AUC: 0.7108 | Val Loss: 0.8765 AUC: 0.7419 Sens: 0.708 Spec: 0.756 | 5.0s
+[2026-06-09 16:55:44] INFO -   Epoch  18/150 | Train Loss: 0.7851 AUC: 0.7500 | Val Loss: 0.8783 AUC: 0.7419 Sens: 0.750 Spec: 0.732 | 4.7s
+[2026-06-09 16:55:49] INFO -   Epoch  19/150 | Train Loss: 0.8024 AUC: 0.7030 | Val Loss: 0.8750 AUC: 0.7393 Sens: 0.750 Spec: 0.756 | 5.2s
+[2026-06-09 16:55:52] INFO -   Epoch  20/150 | Train Loss: 0.7519 AUC: 0.7661 | Val Loss: 0.8695 AUC: 0.7307 Sens: 0.667 Spec: 0.756 | 3.5s
+[2026-06-09 16:55:58] INFO -   Epoch  21/150 | Train Loss: 0.7737 AUC: 0.7460 | Val Loss: 0.8673 AUC: 0.7104 Sens: 0.792 Spec: 0.610 | 6.0s
+[2026-06-09 16:56:02] INFO -   Epoch  22/150 | Train Loss: 0.7719 AUC: 0.7485 | Val Loss: 0.8681 AUC: 0.6870 Sens: 0.708 Spec: 0.634 | 3.6s
+[2026-06-09 16:56:08] INFO -   Epoch  23/150 | Train Loss: 0.6909 AUC: 0.8104 | Val Loss: 0.8664 AUC: 0.6936 Sens: 0.792 Spec: 0.585 | 5.8s
+[2026-06-09 16:56:11] INFO -   Epoch  24/150 | Train Loss: 0.7442 AUC: 0.7649 | Val Loss: 0.8615 AUC: 0.6819 Sens: 0.792 Spec: 0.610 | 3.6s
+[2026-06-09 16:56:17] INFO -   Epoch  25/150 | Train Loss: 0.8004 AUC: 0.7169 | Val Loss: 0.8587 AUC: 0.6911 Sens: 0.750 Spec: 0.610 | 5.4s
+[2026-06-09 16:56:21] INFO -   Epoch  26/150 | Train Loss: 0.7323 AUC: 0.7817 | Val Loss: 0.8734 AUC: 0.6717 Sens: 0.792 Spec: 0.585 | 4.1s
+[2026-06-09 16:56:26] INFO -   Epoch  27/150 | Train Loss: 0.7939 AUC: 0.7361 | Val Loss: 0.8648 AUC: 0.6657 Sens: 0.875 Spec: 0.439 | 5.0s
+[2026-06-09 16:56:31] INFO -   Epoch  28/150 | Train Loss: 0.7913 AUC: 0.7237 | Val Loss: 0.8536 AUC: 0.6575 Sens: 0.500 Spec: 0.805 | 5.1s
+[2026-06-09 16:56:36] INFO -   Epoch  29/150 | Train Loss: 0.7458 AUC: 0.7667 | Val Loss: 0.8631 AUC: 0.6484 Sens: 0.583 Spec: 0.707 | 5.0s
+[2026-06-09 16:56:40] INFO -   Epoch  30/150 | Train Loss: 0.7189 AUC: 0.7922 | Val Loss: 0.8543 AUC: 0.6443 Sens: 0.542 Spec: 0.732 | 4.6s
+[2026-06-09 16:56:45] INFO -   Epoch  31/150 | Train Loss: 0.7643 AUC: 0.7618 | Val Loss: 0.8439 AUC: 0.6717 Sens: 0.792 Spec: 0.537 | 4.6s
+[2026-06-09 16:56:50] INFO -   Epoch  32/150 | Train Loss: 0.6655 AUC: 0.8184 | Val Loss: 0.8295 AUC: 0.6931 Sens: 0.500 Spec: 0.829 | 5.3s
+[2026-06-09 16:56:55] INFO -   Epoch  33/150 | Train Loss: 0.7217 AUC: 0.7748 | Val Loss: 0.8459 AUC: 0.6697 Sens: 0.417 Spec: 0.878 | 4.3s
+[2026-06-09 16:57:00] INFO -   Epoch  34/150 | Train Loss: 0.7476 AUC: 0.7633 | Val Loss: 0.8502 AUC: 0.6636 Sens: 0.500 Spec: 0.805 | 5.7s
+[2026-06-09 16:57:04] INFO -   Epoch  35/150 | Train Loss: 0.7218 AUC: 0.8067 | Val Loss: 0.8437 AUC: 0.6677 Sens: 0.500 Spec: 0.829 | 3.8s
+[2026-06-09 16:57:10] INFO -   Epoch  36/150 | Train Loss: 0.6562 AUC: 0.8323 | Val Loss: 0.8463 AUC: 0.6585 Sens: 0.625 Spec: 0.707 | 5.8s
+[2026-06-09 16:57:14] INFO -   Epoch  37/150 | Train Loss: 0.6491 AUC: 0.8451 | Val Loss: 0.8438 AUC: 0.6494 Sens: 0.583 Spec: 0.805 | 3.7s
+[2026-06-09 16:57:19] INFO -   Epoch  38/150 | Train Loss: 0.6158 AUC: 0.8422 | Val Loss: 0.8346 AUC: 0.6748 Sens: 0.458 Spec: 0.878 | 5.4s
+[2026-06-09 16:57:24] INFO -   Epoch  39/150 | Train Loss: 0.6870 AUC: 0.8186 | Val Loss: 0.8343 AUC: 0.6723 Sens: 0.708 Spec: 0.610 | 4.4s
+[2026-06-09 16:57:28] INFO -   Epoch  40/150 | Train Loss: 0.6476 AUC: 0.8395 | Val Loss: 0.8404 AUC: 0.6596 Sens: 0.375 Spec: 0.902 | 4.7s
+[2026-06-09 16:57:33] INFO -   Epoch  41/150 | Train Loss: 0.6145 AUC: 0.8639 | Val Loss: 0.8387 AUC: 0.6667 Sens: 0.500 Spec: 0.829 | 4.8s
+[2026-06-09 16:57:37] INFO -   Epoch  42/150 | Train Loss: 0.6270 AUC: 0.8389 | Val Loss: 0.8238 AUC: 0.6768 Sens: 0.542 Spec: 0.805 | 4.1s
+[2026-06-09 16:57:43] INFO -   Epoch  43/150 | Train Loss: 0.5881 AUC: 0.8742 | Val Loss: 0.8374 AUC: 0.6646 Sens: 0.500 Spec: 0.829 | 5.6s
+[2026-06-09 16:57:47] INFO -   Epoch  44/150 | Train Loss: 0.6424 AUC: 0.8531 | Val Loss: 0.8422 AUC: 0.6545 Sens: 0.542 Spec: 0.756 | 4.2s
+[2026-06-09 16:57:53] INFO -   Epoch  45/150 | Train Loss: 0.6107 AUC: 0.8595 | Val Loss: 0.8291 AUC: 0.6768 Sens: 0.458 Spec: 0.902 | 5.9s
+[2026-06-09 16:57:57] INFO -   Epoch  46/150 | Train Loss: 0.6445 AUC: 0.8429 | Val Loss: 0.8359 AUC: 0.6667 Sens: 0.500 Spec: 0.829 | 3.9s
+[2026-06-09 16:57:57] INFO -   Early stopping at epoch 46 (patience=30)
+[2026-06-09 16:58:00] INFO -   TTA:    AUC=0.7388 Sens=0.792 Spec=0.659
+[2026-06-09 16:58:00] INFO -   Fold 2 best val AUC: 0.7419
+[2026-06-09 16:58:00] INFO -   Final metrics: {'auc': 0.741869918699187, 'sensitivity': 0.75, 'specificity': 0.7560975609756098, 'f1': 0.6923076923076923, 'accuracy': 0.7538461538461538, 'ppv': 0.6428571428571429, 'npv': 0.8378378378378378, 'threshold': 0.5987228751182556, 'tp': 18, 'fp': 10, 'tn': 31, 'fn': 6, 'loss': 0.8751686380459712}
+[2026-06-09 16:58:00] INFO - 
+============================================================
+[2026-06-09 16:58:00] INFO -   FOLD 4/5 — Condition: post
+[2026-06-09 16:58:00] INFO -   Train: 258 patients | Val: 63 patients
+[2026-06-09 16:58:00] INFO - ============================================================
+[2026-06-09 16:58:01] INFO -   Compiling model with torch.compile() for speedup...
+[2026-06-09 16:58:14] INFO -   Epoch   1/150 | Train Loss: 0.9475 AUC: 0.5018 | Val Loss: 0.8997 AUC: 0.4098 Sens: 1.000 Spec: 0.025 | 12.2s
+[2026-06-09 16:58:14] INFO -   ★ New best val AUC: 0.4098 (in memory)
+[2026-06-09 16:58:18] INFO -   Epoch   2/150 | Train Loss: 0.9346 AUC: 0.4782 | Val Loss: 0.8883 AUC: 0.5174 Sens: 0.478 Spec: 0.775 | 4.3s
+[2026-06-09 16:58:18] INFO -   ★ New best val AUC: 0.5174 (in memory)
+[2026-06-09 16:58:24] INFO -   Epoch   3/150 | Train Loss: 0.8983 AUC: 0.5514 | Val Loss: 0.8891 AUC: 0.5076 Sens: 0.391 Spec: 0.800 | 5.5s
+[2026-06-09 16:58:27] INFO -   Epoch   4/150 | Train Loss: 0.9094 AUC: 0.5082 | Val Loss: 0.8869 AUC: 0.5266 Sens: 0.435 Spec: 0.775 | 3.8s
+[2026-06-09 16:58:27] INFO -   ★ New best val AUC: 0.5266 (in memory)
+[2026-06-09 16:58:33] INFO -   Epoch   5/150 | Train Loss: 0.8896 AUC: 0.5258 | Val Loss: 0.8925 AUC: 0.5163 Sens: 0.565 Spec: 0.650 | 5.8s
+[2026-06-09 16:58:37] INFO -   Epoch   6/150 | Train Loss: 0.9022 AUC: 0.5463 | Val Loss: 0.8884 AUC: 0.5484 Sens: 0.565 Spec: 0.725 | 3.8s
+[2026-06-09 16:58:37] INFO -   ★ New best val AUC: 0.5484 (in memory)
+[2026-06-09 16:58:42] INFO -   Epoch   7/150 | Train Loss: 0.9099 AUC: 0.4968 | Val Loss: 0.8928 AUC: 0.4848 Sens: 0.478 Spec: 0.625 | 5.6s
+[2026-06-09 16:58:47] INFO -   Epoch   8/150 | Train Loss: 0.8983 AUC: 0.5688 | Val Loss: 0.8933 AUC: 0.4679 Sens: 0.913 Spec: 0.150 | 4.1s
+[2026-06-09 16:58:52] INFO -   Epoch   9/150 | Train Loss: 0.8949 AUC: 0.5734 | Val Loss: 0.8871 AUC: 0.5565 Sens: 0.739 Spec: 0.500 | 5.2s
+[2026-06-09 16:58:52] INFO -   ★ New best val AUC: 0.5565 (in memory)
+[2026-06-09 16:58:56] INFO -   Epoch  10/150 | Train Loss: 0.8937 AUC: 0.5864 | Val Loss: 0.8889 AUC: 0.5685 Sens: 0.696 Spec: 0.575 | 4.3s
+[2026-06-09 16:58:56] INFO -   ★ New best val AUC: 0.5685 (in memory)
+[2026-06-09 16:59:00] INFO -   Epoch  11/150 | Train Loss: 0.8392 AUC: 0.6761 | Val Loss: 0.8912 AUC: 0.5772 Sens: 0.609 Spec: 0.675 | 4.1s
+[2026-06-09 16:59:00] INFO -   ★ New best val AUC: 0.5772 (in memory)
+[2026-06-09 16:59:06] INFO -   Epoch  12/150 | Train Loss: 0.8362 AUC: 0.6719 | Val Loss: 0.8885 AUC: 0.5989 Sens: 0.652 Spec: 0.600 | 5.3s
+[2026-06-09 16:59:06] INFO -   ★ New best val AUC: 0.5989 (in memory)
+[2026-06-09 16:59:10] INFO -   Epoch  13/150 | Train Loss: 0.8468 AUC: 0.6538 | Val Loss: 0.8921 AUC: 0.5793 Sens: 0.348 Spec: 0.850 | 4.2s
+[2026-06-09 16:59:15] INFO -   Epoch  14/150 | Train Loss: 0.8044 AUC: 0.7260 | Val Loss: 0.8893 AUC: 0.6033 Sens: 0.304 Spec: 0.925 | 5.1s
+[2026-06-09 16:59:15] INFO -   ★ New best val AUC: 0.6033 (in memory)
+[2026-06-09 16:59:19] INFO -   Epoch  15/150 | Train Loss: 0.7931 AUC: 0.7239 | Val Loss: 0.8886 AUC: 0.5761 Sens: 0.522 Spec: 0.675 | 4.1s
+[2026-06-09 16:59:25] INFO -   Epoch  16/150 | Train Loss: 0.7987 AUC: 0.7309 | Val Loss: 0.8832 AUC: 0.6065 Sens: 0.435 Spec: 0.800 | 6.0s
+[2026-06-09 16:59:25] INFO -   ★ New best val AUC: 0.6065 (in memory)
+[2026-06-09 16:59:30] INFO -   Epoch  17/150 | Train Loss: 0.8303 AUC: 0.6906 | Val Loss: 0.8775 AUC: 0.6326 Sens: 0.522 Spec: 0.750 | 4.7s
+[2026-06-09 16:59:30] INFO -   ★ New best val AUC: 0.6326 (in memory)
+[2026-06-09 16:59:37] INFO -   Epoch  18/150 | Train Loss: 0.8177 AUC: 0.7029 | Val Loss: 0.8831 AUC: 0.6234 Sens: 0.304 Spec: 0.950 | 7.7s
+[2026-06-09 16:59:41] INFO -   Epoch  19/150 | Train Loss: 0.8796 AUC: 0.6289 | Val Loss: 0.8813 AUC: 0.6174 Sens: 0.435 Spec: 0.850 | 3.8s
+[2026-06-09 16:59:47] INFO -   Epoch  20/150 | Train Loss: 0.8393 AUC: 0.6744 | Val Loss: 0.8883 AUC: 0.5804 Sens: 0.391 Spec: 0.850 | 5.3s
+[2026-06-09 16:59:53] INFO -   Epoch  21/150 | Train Loss: 0.7545 AUC: 0.7735 | Val Loss: 0.8925 AUC: 0.5582 Sens: 0.435 Spec: 0.800 | 6.2s
+[2026-06-09 16:59:58] INFO -   Epoch  22/150 | Train Loss: 0.7676 AUC: 0.7458 | Val Loss: 0.8874 AUC: 0.5750 Sens: 0.391 Spec: 0.900 | 5.4s
+[2026-06-09 17:00:05] INFO -   Epoch  23/150 | Train Loss: 0.7731 AUC: 0.7401 | Val Loss: 0.8868 AUC: 0.5750 Sens: 0.391 Spec: 0.850 | 6.9s
+[2026-06-09 17:00:09] INFO -   Epoch  24/150 | Train Loss: 0.7823 AUC: 0.7282 | Val Loss: 0.8742 AUC: 0.5924 Sens: 0.348 Spec: 0.925 | 4.0s
+[2026-06-09 17:00:16] INFO -   Epoch  25/150 | Train Loss: 0.8024 AUC: 0.7240 | Val Loss: 0.8729 AUC: 0.5957 Sens: 0.652 Spec: 0.625 | 7.2s
+[2026-06-09 17:00:20] INFO -   Epoch  26/150 | Train Loss: 0.7685 AUC: 0.7444 | Val Loss: 0.8780 AUC: 0.5870 Sens: 0.609 Spec: 0.700 | 4.2s
+[2026-06-09 17:00:29] INFO -   Epoch  27/150 | Train Loss: 0.7289 AUC: 0.7764 | Val Loss: 0.8720 AUC: 0.6022 Sens: 0.609 Spec: 0.750 | 8.4s
+[2026-06-09 17:00:35] INFO -   Epoch  28/150 | Train Loss: 0.7696 AUC: 0.7716 | Val Loss: 0.8653 AUC: 0.6120 Sens: 0.609 Spec: 0.725 | 6.5s
+[2026-06-09 17:00:40] INFO -   Epoch  29/150 | Train Loss: 0.7146 AUC: 0.8131 | Val Loss: 0.8704 AUC: 0.6054 Sens: 0.522 Spec: 0.800 | 4.8s
+[2026-06-09 17:00:47] INFO -   Epoch  30/150 | Train Loss: 0.7169 AUC: 0.8007 | Val Loss: 0.8691 AUC: 0.6174 Sens: 0.435 Spec: 0.850 | 7.4s
+[2026-06-09 17:00:53] INFO -   Epoch  31/150 | Train Loss: 0.6593 AUC: 0.8210 | Val Loss: 0.8698 AUC: 0.6217 Sens: 0.522 Spec: 0.750 | 6.0s
+[2026-06-09 17:01:03] INFO -   Epoch  32/150 | Train Loss: 0.6832 AUC: 0.7823 | Val Loss: 0.8602 AUC: 0.6228 Sens: 0.609 Spec: 0.750 | 9.7s
+[2026-06-09 17:01:09] INFO -   Epoch  33/150 | Train Loss: 0.6976 AUC: 0.8000 | Val Loss: 0.8657 AUC: 0.6185 Sens: 0.609 Spec: 0.725 | 6.2s
+[2026-06-09 17:01:18] INFO -   Epoch  34/150 | Train Loss: 0.6976 AUC: 0.8072 | Val Loss: 0.8506 AUC: 0.6462 Sens: 0.609 Spec: 0.675 | 8.9s
+[2026-06-09 17:01:18] INFO -   ★ New best val AUC: 0.6462 (in memory)
+[2026-06-09 17:01:25] INFO -   Epoch  35/150 | Train Loss: 0.6933 AUC: 0.8066 | Val Loss: 0.8507 AUC: 0.6304 Sens: 0.435 Spec: 0.850 | 6.6s
+[2026-06-09 17:01:32] INFO -   Epoch  36/150 | Train Loss: 0.6978 AUC: 0.8063 | Val Loss: 0.8458 AUC: 0.6565 Sens: 0.609 Spec: 0.775 | 7.6s
+[2026-06-09 17:01:32] INFO -   ★ New best val AUC: 0.6565 (in memory)
+[2026-06-09 17:01:37] INFO -   Epoch  37/150 | Train Loss: 0.7589 AUC: 0.7817 | Val Loss: 0.8467 AUC: 0.6446 Sens: 0.522 Spec: 0.875 | 4.7s
+[2026-06-09 17:01:47] INFO -   Epoch  38/150 | Train Loss: 0.6899 AUC: 0.8068 | Val Loss: 0.8615 AUC: 0.6174 Sens: 0.522 Spec: 0.875 | 9.5s
+[2026-06-09 17:01:53] INFO -   Epoch  39/150 | Train Loss: 0.6880 AUC: 0.8265 | Val Loss: 0.8659 AUC: 0.6130 Sens: 0.522 Spec: 0.875 | 6.2s
+[2026-06-09 17:02:00] INFO -   Epoch  40/150 | Train Loss: 0.6754 AUC: 0.8379 | Val Loss: 0.8633 AUC: 0.6196 Sens: 0.565 Spec: 0.875 | 7.5s
+[2026-06-09 17:02:09] INFO -   Epoch  41/150 | Train Loss: 0.5831 AUC: 0.8752 | Val Loss: 0.8741 AUC: 0.5826 Sens: 0.565 Spec: 0.875 | 8.7s
+[2026-06-09 17:02:15] INFO -   Epoch  42/150 | Train Loss: 0.5872 AUC: 0.8640 | Val Loss: 0.8800 AUC: 0.5902 Sens: 0.478 Spec: 0.900 | 6.0s
+[2026-06-09 17:02:25] INFO -   Epoch  43/150 | Train Loss: 0.5978 AUC: 0.8574 | Val Loss: 0.8651 AUC: 0.6370 Sens: 0.522 Spec: 0.825 | 9.6s
+[2026-06-09 17:02:31] INFO -   Epoch  44/150 | Train Loss: 0.6249 AUC: 0.8442 | Val Loss: 0.8866 AUC: 0.6234 Sens: 0.565 Spec: 0.800 | 6.0s
+[2026-06-09 17:02:39] INFO -   Epoch  45/150 | Train Loss: 0.5624 AUC: 0.8936 | Val Loss: 0.8786 AUC: 0.6060 Sens: 0.565 Spec: 0.775 | 8.4s
+[2026-06-09 17:02:45] INFO -   Epoch  46/150 | Train Loss: 0.6013 AUC: 0.8640 | Val Loss: 0.8701 AUC: 0.6098 Sens: 0.522 Spec: 0.775 | 6.2s
+[2026-06-09 17:02:53] INFO -   Epoch  47/150 | Train Loss: 0.6826 AUC: 0.8233 | Val Loss: 0.8779 AUC: 0.6114 Sens: 0.565 Spec: 0.800 | 7.8s
+[2026-06-09 17:03:01] INFO -   Epoch  48/150 | Train Loss: 0.5678 AUC: 0.8771 | Val Loss: 0.8961 AUC: 0.6076 Sens: 0.522 Spec: 0.825 | 7.4s
+[2026-06-09 17:03:07] INFO -   Epoch  49/150 | Train Loss: 0.5405 AUC: 0.8936 | Val Loss: 0.9028 AUC: 0.6217 Sens: 0.652 Spec: 0.700 | 6.5s
+[2026-06-09 17:03:15] INFO -   Epoch  50/150 | Train Loss: 0.5502 AUC: 0.8740 | Val Loss: 0.9115 AUC: 0.6212 Sens: 0.565 Spec: 0.850 | 7.6s
+[2026-06-09 17:03:21] INFO -   Epoch  51/150 | Train Loss: 0.6611 AUC: 0.8414 | Val Loss: 0.8771 AUC: 0.6359 Sens: 0.565 Spec: 0.825 | 6.2s
+[2026-06-09 17:03:29] INFO -   Epoch  52/150 | Train Loss: 0.5411 AUC: 0.8965 | Val Loss: 0.8456 AUC: 0.6380 Sens: 0.609 Spec: 0.775 | 8.1s
+[2026-06-09 17:03:36] INFO -   Epoch  53/150 | Train Loss: 0.5267 AUC: 0.9091 | Val Loss: 0.8546 AUC: 0.6402 Sens: 0.609 Spec: 0.800 | 6.8s
+[2026-06-09 17:03:44] INFO -   Epoch  54/150 | Train Loss: 0.5843 AUC: 0.8716 | Val Loss: 0.8636 AUC: 0.6228 Sens: 0.565 Spec: 0.825 | 8.1s
+[2026-06-09 17:03:51] INFO -   Epoch  55/150 | Train Loss: 0.5314 AUC: 0.9044 | Val Loss: 0.8595 AUC: 0.6380 Sens: 0.609 Spec: 0.750 | 6.8s
+[2026-06-09 17:03:58] INFO -   Epoch  56/150 | Train Loss: 0.4800 AUC: 0.9202 | Val Loss: 0.8539 AUC: 0.6457 Sens: 0.609 Spec: 0.775 | 7.6s
+[2026-06-09 17:04:06] INFO -   Epoch  57/150 | Train Loss: 0.5619 AUC: 0.8829 | Val Loss: 0.8602 AUC: 0.6484 Sens: 0.522 Spec: 0.825 | 8.0s
+[2026-06-09 17:04:14] INFO -   Epoch  58/150 | Train Loss: 0.5612 AUC: 0.8824 | Val Loss: 0.8559 AUC: 0.6571 Sens: 0.565 Spec: 0.800 | 7.5s
+[2026-06-09 17:04:14] INFO -   ★ New best val AUC: 0.6571 (in memory)
+[2026-06-09 17:04:21] INFO -   Epoch  59/150 | Train Loss: 0.6091 AUC: 0.8854 | Val Loss: 0.8585 AUC: 0.6630 Sens: 0.565 Spec: 0.850 | 6.8s
+[2026-06-09 17:04:21] INFO -   ★ New best val AUC: 0.6630 (in memory)
+[2026-06-09 17:04:28] INFO -   Epoch  60/150 | Train Loss: 0.5298 AUC: 0.9099 | Val Loss: 0.8729 AUC: 0.6500 Sens: 0.478 Spec: 0.900 | 7.5s
+[2026-06-09 17:04:35] INFO -   Epoch  61/150 | Train Loss: 0.4850 AUC: 0.9209 | Val Loss: 0.8674 AUC: 0.6554 Sens: 0.565 Spec: 0.775 | 7.2s
+[2026-06-09 17:04:42] INFO -   Epoch  62/150 | Train Loss: 0.5093 AUC: 0.9028 | Val Loss: 0.8926 AUC: 0.6359 Sens: 0.522 Spec: 0.875 | 6.8s
+[2026-06-09 17:04:49] INFO -   Epoch  63/150 | Train Loss: 0.5065 AUC: 0.9044 | Val Loss: 0.8637 AUC: 0.6598 Sens: 0.565 Spec: 0.900 | 6.7s
+[2026-06-09 17:04:57] INFO -   Epoch  64/150 | Train Loss: 0.5424 AUC: 0.8937 | Val Loss: 0.8728 AUC: 0.6620 Sens: 0.522 Spec: 0.900 | 7.8s
+[2026-06-09 17:05:04] INFO -   Epoch  65/150 | Train Loss: 0.4313 AUC: 0.9344 | Val Loss: 0.8546 AUC: 0.6772 Sens: 0.565 Spec: 0.875 | 6.9s
+[2026-06-09 17:05:04] INFO -   ★ New best val AUC: 0.6772 (in memory)
+[2026-06-09 17:05:11] INFO -   Epoch  66/150 | Train Loss: 0.4771 AUC: 0.9234 | Val Loss: 0.8421 AUC: 0.6793 Sens: 0.565 Spec: 0.875 | 7.7s
+[2026-06-09 17:05:11] INFO -   ★ New best val AUC: 0.6793 (in memory)
+[2026-06-09 17:05:18] INFO -   Epoch  67/150 | Train Loss: 0.4392 AUC: 0.9381 | Val Loss: 0.8661 AUC: 0.6788 Sens: 0.565 Spec: 0.850 | 6.4s
+[2026-06-09 17:05:25] INFO -   Epoch  68/150 | Train Loss: 0.4691 AUC: 0.9292 | Val Loss: 0.8733 AUC: 0.6728 Sens: 0.522 Spec: 0.850 | 6.8s
+[2026-06-09 17:05:32] INFO -   Epoch  69/150 | Train Loss: 0.5039 AUC: 0.9251 | Val Loss: 0.9048 AUC: 0.6386 Sens: 0.478 Spec: 0.850 | 7.3s
+[2026-06-09 17:05:39] INFO -   Epoch  70/150 | Train Loss: 0.5120 AUC: 0.9019 | Val Loss: 0.9360 AUC: 0.6261 Sens: 0.565 Spec: 0.750 | 7.6s
+[2026-06-09 17:05:47] INFO -   Epoch  71/150 | Train Loss: 0.4587 AUC: 0.9265 | Val Loss: 0.9438 AUC: 0.6315 Sens: 0.478 Spec: 0.875 | 7.1s
+[2026-06-09 17:05:54] INFO -   Epoch  72/150 | Train Loss: 0.4289 AUC: 0.9438 | Val Loss: 0.9480 AUC: 0.6348 Sens: 0.435 Spec: 0.875 | 7.4s
+[2026-06-09 17:06:01] INFO -   Epoch  73/150 | Train Loss: 0.4474 AUC: 0.9334 | Val Loss: 0.9525 AUC: 0.6304 Sens: 0.478 Spec: 0.800 | 7.3s
+[2026-06-09 17:06:08] INFO -   Epoch  74/150 | Train Loss: 0.4408 AUC: 0.9299 | Val Loss: 0.9723 AUC: 0.6196 Sens: 0.696 Spec: 0.575 | 6.5s
+[2026-06-09 17:06:15] INFO -   Epoch  75/150 | Train Loss: 0.4458 AUC: 0.9352 | Val Loss: 0.9596 AUC: 0.6380 Sens: 0.478 Spec: 0.825 | 7.2s
+[2026-06-09 17:06:22] INFO -   Epoch  76/150 | Train Loss: 0.4694 AUC: 0.9161 | Val Loss: 0.9540 AUC: 0.6359 Sens: 0.478 Spec: 0.850 | 6.9s
+[2026-06-09 17:06:30] INFO -   Epoch  77/150 | Train Loss: 0.4636 AUC: 0.9131 | Val Loss: 0.9894 AUC: 0.6478 Sens: 0.565 Spec: 0.850 | 8.5s
+[2026-06-09 17:06:37] INFO -   Epoch  78/150 | Train Loss: 0.3976 AUC: 0.9526 | Val Loss: 0.9641 AUC: 0.6565 Sens: 0.565 Spec: 0.825 | 6.9s
+[2026-06-09 17:06:45] INFO -   Epoch  79/150 | Train Loss: 0.4080 AUC: 0.9434 | Val Loss: 1.0248 AUC: 0.6348 Sens: 0.522 Spec: 0.825 | 8.0s
+[2026-06-09 17:06:52] INFO -   Epoch  80/150 | Train Loss: 0.3831 AUC: 0.9497 | Val Loss: 1.0769 AUC: 0.6413 Sens: 0.478 Spec: 0.850 | 6.7s
+[2026-06-09 17:06:58] INFO -   Epoch  81/150 | Train Loss: 0.3854 AUC: 0.9463 | Val Loss: 1.0763 AUC: 0.6217 Sens: 0.565 Spec: 0.725 | 6.0s
+[2026-06-09 17:07:06] INFO -   Epoch  82/150 | Train Loss: 0.3833 AUC: 0.9484 | Val Loss: 1.0451 AUC: 0.6207 Sens: 0.565 Spec: 0.725 | 8.3s
+[2026-06-09 17:07:13] INFO -   Epoch  83/150 | Train Loss: 0.5382 AUC: 0.9180 | Val Loss: 1.0245 AUC: 0.6446 Sens: 0.478 Spec: 0.850 | 6.7s
+[2026-06-09 17:07:21] INFO -   Epoch  84/150 | Train Loss: 0.3921 AUC: 0.9501 | Val Loss: 0.9965 AUC: 0.6413 Sens: 0.478 Spec: 0.875 | 7.8s
+[2026-06-09 17:07:28] INFO -   Epoch  85/150 | Train Loss: 0.3292 AUC: 0.9694 | Val Loss: 0.9535 AUC: 0.6565 Sens: 0.522 Spec: 0.850 | 7.2s
+[2026-06-09 17:07:35] INFO -   Epoch  86/150 | Train Loss: 0.3619 AUC: 0.9572 | Val Loss: 1.0054 AUC: 0.6576 Sens: 0.565 Spec: 0.800 | 7.3s
+[2026-06-09 17:07:43] INFO -   Epoch  87/150 | Train Loss: 0.3930 AUC: 0.9466 | Val Loss: 1.0156 AUC: 0.6500 Sens: 0.478 Spec: 0.900 | 7.3s
+[2026-06-09 17:07:50] INFO -   Epoch  88/150 | Train Loss: 0.3544 AUC: 0.9582 | Val Loss: 0.9974 AUC: 0.6576 Sens: 0.652 Spec: 0.650 | 7.4s
+[2026-06-09 17:07:58] INFO -   Epoch  89/150 | Train Loss: 0.4391 AUC: 0.9430 | Val Loss: 0.9924 AUC: 0.6565 Sens: 0.478 Spec: 0.875 | 8.4s
+[2026-06-09 17:08:06] INFO -   Epoch  90/150 | Train Loss: 0.5107 AUC: 0.9202 | Val Loss: 0.9957 AUC: 0.6620 Sens: 0.522 Spec: 0.825 | 8.0s
+[2026-06-09 17:08:14] INFO -   Epoch  91/150 | Train Loss: 0.4134 AUC: 0.9407 | Val Loss: 0.9962 AUC: 0.6565 Sens: 0.478 Spec: 0.875 | 7.4s
+[2026-06-09 17:08:22] INFO -   Epoch  92/150 | Train Loss: 0.3485 AUC: 0.9569 | Val Loss: 1.0210 AUC: 0.6565 Sens: 0.478 Spec: 0.850 | 8.1s
+[2026-06-09 17:08:29] INFO -   Epoch  93/150 | Train Loss: 0.3954 AUC: 0.9473 | Val Loss: 1.0582 AUC: 0.6489 Sens: 0.435 Spec: 0.875 | 7.4s
+[2026-06-09 17:08:37] INFO -   Epoch  94/150 | Train Loss: 0.3095 AUC: 0.9710 | Val Loss: 1.0852 AUC: 0.6478 Sens: 0.565 Spec: 0.750 | 7.6s
+[2026-06-09 17:08:45] INFO -   Epoch  95/150 | Train Loss: 0.4479 AUC: 0.9346 | Val Loss: 1.0693 AUC: 0.6489 Sens: 0.478 Spec: 0.850 | 7.7s
+[2026-06-09 17:08:52] INFO -   Epoch  96/150 | Train Loss: 0.3074 AUC: 0.9676 | Val Loss: 1.0813 AUC: 0.6457 Sens: 0.522 Spec: 0.850 | 7.7s
+[2026-06-09 17:08:52] INFO -   Early stopping at epoch 96 (patience=30)
+[2026-06-09 17:08:57] INFO -   TTA:    AUC=0.6359 Sens=0.565 Spec=0.775
+[2026-06-09 17:08:57] INFO -   Fold 3 best val AUC: 0.6793
+[2026-06-09 17:08:57] INFO -   Final metrics: {'auc': 0.6793478260869565, 'sensitivity': 0.5652173913043478, 'specificity': 0.875, 'f1': 0.6341463414634146, 'accuracy': 0.7619047619047619, 'ppv': 0.7222222222222222, 'npv': 0.7777777777777778, 'threshold': 0.6619228720664978, 'tp': 13, 'fp': 5, 'tn': 35, 'fn': 10, 'loss': 0.842111953667232}
+[2026-06-09 17:08:57] INFO - 
+============================================================
+[2026-06-09 17:08:57] INFO -   FOLD 5/5 — Condition: post
+[2026-06-09 17:08:57] INFO -   Train: 258 patients | Val: 63 patients
+[2026-06-09 17:08:57] INFO - ============================================================
+[2026-06-09 17:08:59] INFO -   Compiling model with torch.compile() for speedup...
+[2026-06-09 17:09:06] INFO -   Epoch   1/150 | Train Loss: 0.9293 AUC: 0.5177 | Val Loss: 0.9039 AUC: 0.5272 Sens: 0.478 Spec: 0.675 | 7.1s
+[2026-06-09 17:09:06] INFO -   ★ New best val AUC: 0.5272 (in memory)
+[2026-06-09 17:09:14] INFO -   Epoch   2/150 | Train Loss: 0.9082 AUC: 0.5498 | Val Loss: 0.8914 AUC: 0.5837 Sens: 0.913 Spec: 0.375 | 7.8s
+[2026-06-09 17:09:14] INFO -   ★ New best val AUC: 0.5837 (in memory)
+[2026-06-09 17:09:21] INFO -   Epoch   3/150 | Train Loss: 0.8941 AUC: 0.5722 | Val Loss: 0.8922 AUC: 0.5739 Sens: 0.870 Spec: 0.400 | 7.4s
+[2026-06-09 17:09:28] INFO -   Epoch   4/150 | Train Loss: 0.8872 AUC: 0.5742 | Val Loss: 0.8927 AUC: 0.5783 Sens: 0.913 Spec: 0.325 | 6.6s
+[2026-06-09 17:09:34] INFO -   Epoch   5/150 | Train Loss: 0.9056 AUC: 0.5361 | Val Loss: 0.8945 AUC: 0.5902 Sens: 0.957 Spec: 0.325 | 6.8s
+[2026-06-09 17:09:34] INFO -   ★ New best val AUC: 0.5902 (in memory)
+[2026-06-09 17:09:41] INFO -   Epoch   6/150 | Train Loss: 0.8976 AUC: 0.5637 | Val Loss: 0.8968 AUC: 0.5951 Sens: 0.913 Spec: 0.275 | 6.3s
+[2026-06-09 17:09:41] INFO -   ★ New best val AUC: 0.5951 (in memory)
+[2026-06-09 17:09:47] INFO -   Epoch   7/150 | Train Loss: 0.9001 AUC: 0.5450 | Val Loss: 0.9007 AUC: 0.5848 Sens: 0.478 Spec: 0.725 | 6.3s
+[2026-06-09 17:09:55] INFO -   Epoch   8/150 | Train Loss: 0.8728 AUC: 0.6030 | Val Loss: 0.8957 AUC: 0.5935 Sens: 0.435 Spec: 0.800 | 7.7s
+[2026-06-09 17:10:02] INFO -   Epoch   9/150 | Train Loss: 0.8421 AUC: 0.6804 | Val Loss: 0.8944 AUC: 0.5663 Sens: 0.783 Spec: 0.500 | 6.8s
+[2026-06-09 17:10:09] INFO -   Epoch  10/150 | Train Loss: 0.8780 AUC: 0.6200 | Val Loss: 0.8948 AUC: 0.5457 Sens: 0.783 Spec: 0.425 | 6.9s
+[2026-06-09 17:10:15] INFO -   Epoch  11/150 | Train Loss: 0.8148 AUC: 0.7006 | Val Loss: 0.8987 AUC: 0.5304 Sens: 0.783 Spec: 0.425 | 6.9s
+[2026-06-09 17:10:21] INFO -   Epoch  12/150 | Train Loss: 0.8074 AUC: 0.7063 | Val Loss: 0.8932 AUC: 0.5505 Sens: 0.913 Spec: 0.225 | 5.6s
+[2026-06-09 17:10:28] INFO -   Epoch  13/150 | Train Loss: 0.8207 AUC: 0.6902 | Val Loss: 0.8844 AUC: 0.5913 Sens: 0.783 Spec: 0.425 | 6.5s
+[2026-06-09 17:10:34] INFO -   Epoch  14/150 | Train Loss: 0.7952 AUC: 0.7389 | Val Loss: 0.8847 AUC: 0.6027 Sens: 0.783 Spec: 0.425 | 6.0s
+[2026-06-09 17:10:34] INFO -   ★ New best val AUC: 0.6027 (in memory)
+[2026-06-09 17:10:41] INFO -   Epoch  15/150 | Train Loss: 0.7511 AUC: 0.7575 | Val Loss: 0.8844 AUC: 0.6239 Sens: 0.652 Spec: 0.575 | 7.2s
+[2026-06-09 17:10:41] INFO -   ★ New best val AUC: 0.6239 (in memory)
+[2026-06-09 17:10:47] INFO -   Epoch  16/150 | Train Loss: 0.8652 AUC: 0.6739 | Val Loss: 0.8831 AUC: 0.6179 Sens: 0.435 Spec: 0.800 | 6.5s
+[2026-06-09 17:10:55] INFO -   Epoch  17/150 | Train Loss: 0.7676 AUC: 0.7719 | Val Loss: 0.8771 AUC: 0.6402 Sens: 0.652 Spec: 0.625 | 7.6s
+[2026-06-09 17:10:55] INFO -   ★ New best val AUC: 0.6402 (in memory)
+[2026-06-09 17:11:03] INFO -   Epoch  18/150 | Train Loss: 0.8050 AUC: 0.7109 | Val Loss: 0.8785 AUC: 0.6207 Sens: 0.522 Spec: 0.775 | 8.0s
+[2026-06-09 17:11:11] INFO -   Epoch  19/150 | Train Loss: 0.7538 AUC: 0.7525 | Val Loss: 0.8847 AUC: 0.6022 Sens: 0.957 Spec: 0.300 | 7.7s
+[2026-06-09 17:11:18] INFO -   Epoch  20/150 | Train Loss: 0.7719 AUC: 0.7519 | Val Loss: 0.8769 AUC: 0.6065 Sens: 0.522 Spec: 0.750 | 7.5s
+[2026-06-09 17:11:27] INFO -   Epoch  21/150 | Train Loss: 0.7777 AUC: 0.7110 | Val Loss: 0.8707 AUC: 0.6141 Sens: 0.522 Spec: 0.750 | 8.7s
+[2026-06-09 17:11:34] INFO -   Epoch  22/150 | Train Loss: 0.7960 AUC: 0.7172 | Val Loss: 0.8739 AUC: 0.6082 Sens: 0.522 Spec: 0.750 | 7.6s
+[2026-06-09 17:11:43] INFO -   Epoch  23/150 | Train Loss: 0.8062 AUC: 0.7016 | Val Loss: 0.8659 AUC: 0.6087 Sens: 0.609 Spec: 0.625 | 8.4s
+[2026-06-09 17:11:51] INFO -   Epoch  24/150 | Train Loss: 0.7180 AUC: 0.8037 | Val Loss: 0.8668 AUC: 0.5902 Sens: 0.696 Spec: 0.575 | 8.2s
+[2026-06-09 17:11:59] INFO -   Epoch  25/150 | Train Loss: 0.7367 AUC: 0.7893 | Val Loss: 0.8710 AUC: 0.6000 Sens: 0.913 Spec: 0.325 | 7.6s
+[2026-06-09 17:12:06] INFO -   Epoch  26/150 | Train Loss: 0.7812 AUC: 0.7441 | Val Loss: 0.8649 AUC: 0.6293 Sens: 0.522 Spec: 0.750 | 7.8s
+[2026-06-09 17:12:13] INFO -   Epoch  27/150 | Train Loss: 0.7346 AUC: 0.7963 | Val Loss: 0.8816 AUC: 0.5755 Sens: 0.435 Spec: 0.750 | 6.3s
+[2026-06-09 17:12:21] INFO -   Epoch  28/150 | Train Loss: 0.6987 AUC: 0.8133 | Val Loss: 0.8951 AUC: 0.5783 Sens: 1.000 Spec: 0.200 | 8.6s
+[2026-06-09 17:12:29] INFO -   Epoch  29/150 | Train Loss: 0.7559 AUC: 0.7599 | Val Loss: 0.8985 AUC: 0.5620 Sens: 1.000 Spec: 0.200 | 7.5s
+[2026-06-09 17:12:37] INFO -   Epoch  30/150 | Train Loss: 0.6624 AUC: 0.8285 | Val Loss: 0.8826 AUC: 0.5679 Sens: 0.913 Spec: 0.300 | 8.1s
+[2026-06-09 17:12:45] INFO -   Epoch  31/150 | Train Loss: 0.6968 AUC: 0.8088 | Val Loss: 0.8752 AUC: 0.5935 Sens: 0.652 Spec: 0.575 | 8.3s
+[2026-06-09 17:12:52] INFO -   Epoch  32/150 | Train Loss: 0.6944 AUC: 0.8203 | Val Loss: 0.8799 AUC: 0.5859 Sens: 0.739 Spec: 0.525 | 7.2s
+[2026-06-09 17:13:01] INFO -   Epoch  33/150 | Train Loss: 0.6745 AUC: 0.8304 | Val Loss: 0.8829 AUC: 0.5837 Sens: 0.696 Spec: 0.600 | 8.3s
+[2026-06-09 17:13:07] INFO -   Epoch  34/150 | Train Loss: 0.7224 AUC: 0.7933 | Val Loss: 0.8829 AUC: 0.5630 Sens: 0.826 Spec: 0.425 | 6.3s
+[2026-06-09 17:13:16] INFO -   Epoch  35/150 | Train Loss: 0.6979 AUC: 0.8227 | Val Loss: 0.8840 AUC: 0.5609 Sens: 0.957 Spec: 0.200 | 8.9s
+[2026-06-09 17:13:24] INFO -   Epoch  36/150 | Train Loss: 0.6678 AUC: 0.8333 | Val Loss: 0.8807 AUC: 0.5707 Sens: 0.957 Spec: 0.275 | 7.9s
+[2026-06-09 17:13:32] INFO -   Epoch  37/150 | Train Loss: 0.6900 AUC: 0.8232 | Val Loss: 0.8806 AUC: 0.5658 Sens: 0.870 Spec: 0.325 | 7.9s
+[2026-06-09 17:13:40] INFO -   Epoch  38/150 | Train Loss: 0.6515 AUC: 0.8461 | Val Loss: 0.8818 AUC: 0.5533 Sens: 0.957 Spec: 0.200 | 8.3s
+[2026-06-09 17:13:48] INFO -   Epoch  39/150 | Train Loss: 0.6790 AUC: 0.8294 | Val Loss: 0.8772 AUC: 0.5717 Sens: 0.783 Spec: 0.425 | 8.4s
+[2026-06-09 17:13:57] INFO -   Epoch  40/150 | Train Loss: 0.6347 AUC: 0.8380 | Val Loss: 0.8726 AUC: 0.5826 Sens: 0.826 Spec: 0.400 | 8.5s
+[2026-06-09 17:14:05] INFO -   Epoch  41/150 | Train Loss: 0.6309 AUC: 0.8591 | Val Loss: 0.8758 AUC: 0.5728 Sens: 0.957 Spec: 0.250 | 8.3s
+[2026-06-09 17:14:13] INFO -   Epoch  42/150 | Train Loss: 0.6658 AUC: 0.8372 | Val Loss: 0.8950 AUC: 0.5478 Sens: 1.000 Spec: 0.175 | 8.0s
+[2026-06-09 17:14:22] INFO -   Epoch  43/150 | Train Loss: 0.5963 AUC: 0.8744 | Val Loss: 0.9004 AUC: 0.5652 Sens: 0.696 Spec: 0.500 | 9.0s
+[2026-06-09 17:14:31] INFO -   Epoch  44/150 | Train Loss: 0.5985 AUC: 0.8763 | Val Loss: 0.9078 AUC: 0.5717 Sens: 1.000 Spec: 0.200 | 8.9s
+[2026-06-09 17:14:39] INFO -   Epoch  45/150 | Train Loss: 0.5925 AUC: 0.8716 | Val Loss: 0.9156 AUC: 0.5679 Sens: 0.652 Spec: 0.550 | 7.7s
+[2026-06-09 17:14:46] INFO -   Epoch  46/150 | Train Loss: 0.6464 AUC: 0.8514 | Val Loss: 0.9185 AUC: 0.5707 Sens: 0.652 Spec: 0.525 | 7.1s
+[2026-06-09 17:14:53] INFO -   Epoch  47/150 | Train Loss: 0.5415 AUC: 0.9069 | Val Loss: 0.9013 AUC: 0.5565 Sens: 0.261 Spec: 0.900 | 6.6s
+[2026-06-09 17:14:53] INFO -   Early stopping at epoch 47 (patience=30)
+[2026-06-09 17:14:58] INFO -   TTA:    AUC=0.6522 Sens=0.435 Spec=0.875
+[2026-06-09 17:14:58] INFO -   Fold 4 best val AUC: 0.6402
+[2026-06-09 17:14:58] INFO -   Final metrics: {'auc': 0.6402173913043478, 'sensitivity': 0.6521739130434783, 'specificity': 0.625, 'f1': 0.5660377358490566, 'accuracy': 0.6349206349206349, 'ppv': 0.5, 'npv': 0.7575757575757576, 'threshold': 0.5939037203788757, 'tp': 15, 'fp': 15, 'tn': 25, 'fn': 8, 'loss': 0.8770805852753776}
+[2026-06-09 17:14:58] INFO - 
+============================================================
+[2026-06-09 17:14:58] INFO -   FINAL RESULTS — ABLATION_3X_ONLY (5-Fold CV)
+[2026-06-09 17:14:58] INFO - ============================================================
+[2026-06-09 17:14:58] INFO -   auc            : 0.6800 ± 0.0363
+[2026-06-09 17:14:58] INFO -   sensitivity    : 0.7268 ± 0.1173
+[2026-06-09 17:14:58] INFO -   specificity    : 0.6951 ± 0.1306
+[2026-06-09 17:14:58] INFO -   f1             : 0.6457 ± 0.0445
+[2026-06-09 17:14:58] INFO -   accuracy       : 0.7071 ± 0.0549
+[2026-06-09 17:14:58] INFO -   ppv            : 0.5995 ± 0.0837
+[2026-06-09 17:14:58] INFO -   npv            : 0.8231 ± 0.0530
+[2026-06-09 17:14:58] INFO - 
+  ── TTA Results ──
+[2026-06-09 17:14:58] INFO -   auc            : 0.6533 ± 0.0592
+[2026-06-09 17:14:58] INFO -   sensitivity    : 0.6833 ± 0.1604
+[2026-06-09 17:14:58] INFO -   specificity    : 0.6763 ± 0.1923
+[2026-06-09 17:14:58] INFO -   f1             : 0.6077 ± 0.0620
+[2026-06-09 17:14:58] INFO -   accuracy       : 0.6795 ± 0.0804
+[2026-06-09 17:14:58] INFO -   ppv            : 0.5810 ± 0.0831
+[2026-06-09 17:14:58] INFO -   npv            : 0.7959 ± 0.0455
+[2026-06-09 17:14:58] INFO - 
+  Attention Weights (Magnification Importance):
+[2026-06-09 17:14:58] INFO -     3x  : 1.0000 ± 0.0000  ████████████████████████████████████████
+[2026-06-09 17:14:58] INFO - ============================================================
+[2026-06-09 17:14:58] INFO - Training complete!

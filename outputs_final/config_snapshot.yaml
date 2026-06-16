@@ -1,0 +1,121 @@
+# ============================================================================
+# ── Preprocessing ──────────────────────────────────────────────────────────
+preprocessing:
+  enabled: true
+  input_dir: "/workspace/dataset"
+  output_dir: "/workspace/dataset_preprocessed"
+  text_mask_top_pct: 0.13
+  text_mask_left_pct: 0.55
+  roi_padding_pct: 0.15
+  min_roi_area_pct: 0.25
+  jpeg_quality: 95
+  
+data:
+  root_dir: "/workspace/dataset_preprocessed"
+  image_size: 448
+  num_magnifications: 4
+  magnification_labels: ["1x", "3x", "5x", "7x"]
+  pre_acid_files: ["pre_1x.jpg", "pre_3x.jpg", "pre_5x.jpg", "pre_7x.jpg"]
+  post_acid_files: ["post_1x.jpg", "post_3x.jpg", "post_5x.jpg", "post_7x.jpg"]
+  excluded_patients:
+    - "buth_257"
+    - "buth_285"
+    - "buth_293"
+    - "buth_315"
+    - "buth_337"
+
+training:
+  backbone: "resnet18"
+  feature_dim: 512
+
+  epochs: 150
+  batch_size: 12
+
+  lr_backbone: 5.0e-5
+  lr_head: 3.0e-4
+
+  warmup_epochs: 10
+  freeze_backbone_until: 5
+
+  ema_decay: 0.998
+
+  weight_decay: 2.0e-4 #from 3.0e-4 to 2.0e-4
+  optimizer: "adamw"
+  betas: [0.9, 0.999]
+
+  scheduler: "cosine"
+  scheduler_eta_min: 5.0e-7
+
+  n_folds: 5
+  seed: 42
+
+  early_stopping_patience: 30
+  early_stopping_monitor: "val_auc"
+  max_grad_norm: 1.0
+
+  num_workers: 8
+  use_amp: true
+
+  label_smoothing: 0.0
+
+model:
+  pooling: "attention"
+  attention_dim: 128
+  dropout: 0.30
+  dropout_attention: 0.25                        # MAINTENANT ACTIF (ignoré dans v4)
+  gated_attention: true
+  drop_path_rate: 0.05
+  use_batch_norm: true
+
+loss:
+  type: "bce"
+  focal_gamma: 0.0
+  focal_alpha: null
+  pos_weight: 1.75                               # MAINTENANT ACTIF (ignoré dans v4)
+
+augmentation:
+  random_rotation: 25
+  random_crop_scale: [0.82, 1.0]
+  random_horizontal_flip: 0.5
+  random_vertical_flip: 0.0                # DISABLED: cervical anatomy is vertically asymmetric
+
+  random_affine:
+    enabled: true
+    degrees: 0
+    scale: [0.92, 1.08]
+    shear: [-8, 8]
+
+  color_jitter:
+    brightness: 0.20
+    contrast: 0.20
+    saturation: 0.15
+    hue: 0.04
+
+  random_erasing:
+    enabled: true
+    probability: 0.12
+    scale: [0.02, 0.08]
+    ratio: [0.3, 3.3]
+
+  gaussian_blur:
+    enabled: true
+    probability: 0.15
+    kernel_size: [3, 5]
+    sigma: [0.1, 1.0]
+
+  # MixUp/CutMix désactivés — la v4 a fonctionné sans eux
+  mixup_alpha: 0.0
+  cutmix_alpha: 0.0
+  mixup_prob: 0.0
+
+output:
+  dir: "outputs_final"
+  checkpoints: "outputs_final/checkpoints"
+  logs: "outputs_final/logs"
+  metrics: "outputs_final/metrics"
+  figures: "outputs_final/figures"
+
+evaluation:
+  use_tta: true
+  ensemble_folds: true
+  optimize_threshold: true
